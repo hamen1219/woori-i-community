@@ -90,7 +90,7 @@ section input, section textarea, section button{
 	min-height: 250px;
 	height: auto;
 	width: 100%;
-	background-color: rgba(20,20,20,0.1);
+	/* background-color: rgba(20,20,20,0.1); */
 	margin-top: 30px;
 	margin-bottom: 20px;
 	padding: 10px;
@@ -105,7 +105,8 @@ section input, section textarea, section button{
 	width: 100%;
 	padding: 15px;
 	border : 1px solid lightgray;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
+	margin-top: 20px;
 }
 #comment{
 	background-color: skyblue;
@@ -186,10 +187,11 @@ section input, section textarea, section button{
 
 #class_write{
 	width: 100%;
-	background-color: white;
+	background-color: rgba(255,255,255,0.7);
 	box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
-	padding: 10px;
+	padding: 15px;
 	margin-bottom: 30px;
+	border-radius: 5px;
 }
 #class_write h5{
 	margin-bottom: 5px;
@@ -197,8 +199,27 @@ section input, section textarea, section button{
 #class_write textarea{
 	width: 600px;
 	height: 100px;
+	padding: 10px;
 	resize: none;
 }
+#baby_alert{
+	margin-top: 20px;
+}
+#baby_alert textarea{
+	width: 400px;
+	height: 100px;
+	padding: 10px;
+	resize: none;
+}
+#baby_alert button{
+	position: relative;
+	bottom: 43px;
+}
+#baby_alert>div{
+	margin-top: 20px;
+	height: 110px;
+}
+
 #class_write button, #baby_alert button,#class_notice_write button{
 	width: 100px;
 	height: 100px;
@@ -223,12 +244,14 @@ section input, section textarea, section button{
 	#comment_write{
 		width: 100%;
 		height: 180px;
-		padding: 10px;
-		border: 3px solid white;
-		background-color: rgba(20,20,20,0.12);
-		margin-top: 10px;
+		padding: 15px;
+		background-color: #337ab7;
+		margin-top: 20px;
 		box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
 
+	}
+	#comment_write h5{
+		color : white
 	}
 	section hr{
 		margin-top: 7px;
@@ -240,18 +263,22 @@ section input, section textarea, section button{
 		height: 100px;
 		float: left;
 		resize: none;
+		padding: 10px;
+		border: 0;
 	}
 	#comment_write button{
-		width: 60px;
+		width: 80px;
 		height: 100px;
 		float: left;
 		margin-left: 10px;
-		border: 1px solid gray;
+		border: 0;
+		background-color: white;
 		transition: all 0.2s;
 		font-size: 18px;
 	}
 	#comment_write button:hover{
-		background-color: rgba(20,20,20,0.1);
+		background-color: gray;
+		color: white;
 	}
 
 	.bottom{
@@ -266,29 +293,49 @@ section input, section textarea, section button{
 		border-top: 1px solid lightgray;
 	}
 	.paging{
-		border: 1px solid lightgray;
+		border: 1px solid gray;
 		margin: 5px;
 		padding: 5px;
 		padding-left: 7px;
 		padding-right: 7px;
+		background-color: rgba(255,255,255,0.6);
+		color: black;
+		display: inline-block;
+		width: 40px;
+		height:40px;
+		padding-top: 8px;
+		transition: all 0.1s;
+		
 	}
-	.now_page{
+	.paging:hover{
 		background-color: gray;
 		color: white;
 	}
+	.now_page{
+		/* background-color: white; */
+		font-weight: 700;
+		/* border: 2px solid black */
+	}
 	#class_community{
-		background-color: rgba(20,20,20,0.1);
-		padding: 10px;
+		background-color: #66c971;
+		border-radius: 20px;
+		padding: 20px;
+	}
+	#board_cnt{
+		margin-bottom: 10px;
 	}
 	#board_cnt p{
 		display: inline-block;
 		margin-right: 20px;
+		font-weight: 600;
 	}
 
 	.class_board{
 		width: 100%;				
 		border-top: 1px solid lightgray;
+		background-color: rgba(255,255,255,0.5);
 		padding: 5px;
+		border-bottom: 1px solid green;
 	}
 	.board_img_cut{
 		width: 45px;

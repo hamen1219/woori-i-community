@@ -14,13 +14,13 @@
 				<a href="/classroom/class/<?=$row['name']?>">
 					<div class = "class_div">
 						<div>
-							<h3><?=$row['name']?></h3>
+							<h3><?=$row['name']?>반</h3>
 					
 								<div class = "teacher_img_cut">
 									<img src="/img/users/<?=$row['teacher_id']?>/profile/<?=$row['teacher_img']?>" onerror = "this.src = '/img/error/no_img.png'">
 								</div>								
 					
-							<p>교사 | <?=$teacher = $row['teacher_name'] == "" ? "미배정" : $row['teacher_name']?></p>
+							<p>담임교사 | <?=$teacher = $row['teacher_name'] == "" ? "미배정" : $row['teacher_name']?>님</p>
 							
 						</div>						
 					</div>				
