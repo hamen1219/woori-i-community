@@ -8,9 +8,9 @@
 	margin-right: 10px;
 	color: gray;
 }
-#clock:hover{
-	background-color: rgba(20,20,20,0.02);
-}
+/* #clock:hover{
+	background-color: rgba(20,20,20,0.01);
+} */
 .news>div{
 	overflow: hidden;
 }
@@ -29,13 +29,21 @@
 
 }
 #clock{
+	background-color: black;
+	color: white;
 	width: 100%;
-	height: 100px;
+	height: 80px;
 	margin-top: 10px;
+	padding-top: 15px;
 	text-align: center;
 	cursor: pointer;
-	box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+	/* box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22); */
 	transition: all 0.2s;
+}
+.clock_inner{
+	display: inline-block;
+	width: 150px;
+	text-align: left;
 }
 #clock p{
 	margin-bottom: 8px;
@@ -53,22 +61,25 @@
 	
 }
 #latest h4{	
+	font-size: 17px;
+	font-weight: 600;
+	margin-bottom: 10px;
 	padding: 10px;
-	margin-bottom: 15px;
-	border: 1px solid lightgray;
+	border: 2px solid skyblue;
+	border-radius: 5px;
 }
 
 .news{
-	margin-top: 10px;
+	/* height: 50px; */
 	border-bottom: 1px solid lightgray;
-	padding-left: 5px;
+	padding: 5px;
 	display: block;
-	transition: all 0.2s;
+	transition: all 0.1s;
 
 }
 
 .news:hover{
-	background-color: rgba(20,20,20,0.1);
+	background-color: rgba(20,20,20,0.04);
 }
 
 
@@ -78,12 +89,12 @@
 	height: 100%:;
 	min-height: 30px;
 	padding-top: 10px;
-	margin-right: 10px;
+	margin-right: 15px;
 	color: gray;
 	color: rgb(0, 74, 152);
 }
 #clock:hover{
-	background-color: rgba(20,20,20,0.4);
+	/* background-color: rgba(20,20,20,0.1); */
 }
 .news>div{
 	overflow: hidden;

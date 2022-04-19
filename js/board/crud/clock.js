@@ -4,19 +4,19 @@ var clock_num = 0;
 function printTime()
 {
     //click을 통해 cnt 1씩 증가, cnt가 4가 되면 0으로 초기화 (다시 배열 처음부터)
-    $('#clock').click(function(){       
-        if(clock_num==4)
-        {
-            clock_num = 0;
-        }
-        else
-        {
-            clock_num += 1;
-        }       
-    });
+    // $('#clock').click(function(){       
+    //     if(clock_num==4)
+    //     {
+    //         clock_num = 0;
+    //     }
+    //     else
+    //     {
+    //         clock_num += 1;
+    //     }       
+    // });
 
 	//현재시간 넣을 div
-    var clock = document.getElementById("clock");
+    var clock = document.getElementsByClassName("clock_inner")[0];
     //현재시간 객체 생성
     var now = new Date();
 
@@ -26,8 +26,8 @@ function printTime()
     sec = (String(now.getSeconds()).length === 1) ? "0"+String(now.getSeconds()) : now.getSeconds();
 
     //div 내 html print
-    clock.innerHTML = "<p>클릭하면 테마변경</p> <h1 class ='clock_text'>"+hour+":"+min+"</h1><h5 class = 'clock_text'>"+sec+"</h5>";
-    $('.clock_text').css({'font-family' : clock_arr[clock_num]});	       
+    clock.innerHTML = "<h1 class ='clock_text'>"+hour+":"+min+"</h1><h5 class = 'clock_text'>"+sec+"</h5>";
+    // $('.clock_text').css({'font-family' : clock_arr[clock_num]});	       
 
     // setTimeout 함수를 통해 현재 함수(시간 출력 함수)를 1초 간격으로 실행
     setTimeout("printTime(clock_num)", 1000);

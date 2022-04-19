@@ -26,7 +26,7 @@ $(document).ready(function(){
 
 	//댓글 카운트 메뉴 우측 아이콘 클릭시 toggle
 	$(document).on("click","#reply_cnt svg",function(){
-		$('#reply_slide').stop().slideToggle(1000);  
+		$('#reply_slide').stop().slideToggle();  
 	});
 
 	$(document).on("click","#img_cut",function(){				
@@ -430,8 +430,8 @@ function reply_html(result)
 
 			str += "<ul class = \"writer_info writer_info_hidden reply_writer_info\">";
 		    str += "<li><a href=\"/user/myroom/"+row['user']+"\">유저상세보기</a></li>";
-			str += "<li><a href=\"/board/list/사용자/"+row['user']+"\">작성글보기</a></li>";
-			str += "<li><a href=\"\">쪽지보내기</a></li></ul>";
+			str += "<li><a href=\"/board/list/사용자/"+row['user']+"\">작성글보기</a></li></ul>";
+			// str += "<li><a href=\"\">쪽지보내기</a></li></ul>";
 
 			str += "<h5>"+row["user"]+"</h5>";
 

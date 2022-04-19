@@ -100,6 +100,16 @@ class Board extends CI_Controller {
 		{
 			$this->sess->get_access('alert', '/board/menu','해당 게시물이 존재하지 않습니다');
 		}
+		
+		$class_arr = [
+			'학부모' => 'parent',
+			'관리자' => 'admin',
+			'교사' => 'teacher',
+		];
+
+		// var_dump($board);
+
+		$board['class'] = empty($class_arr[$board['dept']]) ? "common" : $class_arr[$board['dept']];
 
 		//4. 권한에 따른 페이지 제어
 		switch($board['cat'])

@@ -26,11 +26,11 @@
 			<?php endif; ?>
 			
 			<!--게시물 제목 페이지-->
-			<div id = "title">
+			<div id = "title" class="<?=$board['class']?>">
 				<h1><?=$board['title']?></h1>				
 				<p>
-					| <a href=""><?=$board['cat'] ?></a> <br>
-					| 작성일 : <?=$board['created']?>
+					<label class="info_label">카테고리</label>| <a href="/board/list/<?=$board['cat'] ?>"><?=$board['cat'] ?></a> <br>
+					<label class="info_label">작성일</label>| <?=$board['created']?>
 					<?php if($board['updated'] !== null): ?>
 						&nbsp; / 최종수정일 : <?=$board['updated']?>
 					<?php endif; ?>
@@ -53,14 +53,14 @@
 				<ul class = "writer_info writer_info_hidden">
 					<li><a href="/user/myroom/<?=$board['user']?>">유저상세보기</a></li>
 					<li><a href="/board/list/작성자/<?=$board['user']?>">작성글보기</a></li>
-					<li><a href="">쪽지보내기</a></li>
+					<!-- <li><a href="">쪽지보내기</a></li> -->
 				</ul>			
 
 				<!--작성자 정보-->
 				<div id = "info_text">
-					<p><b>작성 ID | </b><?=$board['user']?></p>
-					<p><b>작성자 &nbsp;| </b> <?=$board['name'] ?></p>
-					<p><b>가입일 &nbsp;| </b> <?=substr($board['user_created'], 0, 10)?></p>							
+					<p><label for="" class="info_label sm">작성 ID</label> | <?=$board['user']?></p>
+					<p><label for="" class="info_label sm">작성자</label> |  <?="{$board['name']} ({$board['dept']}) "?></p>
+					<p><label for="" class="info_label sm">가입일</label> |  <?=substr($board['user_created'], 0, 10)?></p>							
 				</div>					
 				
 				<!--게시물 보관하기-->				
@@ -184,7 +184,7 @@
 					<ul class = "writer_info writer_info_hidden reply_writer_info">;
 					    <li><a href="/user/myroom/<?=$row['user']?>">유저상세보기</a></li>;
 						<li><a href="/board/list/작성자/<?=$row['user']?>">게시물보기</a></li>;
-						<li><a href="#">쪽지보내기</a></li>
+						<!-- <li><a href="#">쪽지보내기</a></li> -->
 					</ul>
 
 					<!--부모 댓글 div 시작-->
@@ -228,7 +228,7 @@
 					<ul class = "writer_info writer_info_hidden reply_writer_info">
 						<li><a href="/user/myroom/<?=$row['user']?>">유저상세보기</a></li>
 						<li><a href="/board/list/작성자/<?=$row['user']?>">게시물보기</a></li>
-						<li><a href="">쪽지보내기</a></li>
+						<!-- <li><a href="">쪽지보내기</a></li> -->
 					</ul>
 					<h5><?=$row['user']?></h5>		
 
@@ -286,6 +286,9 @@
 	<div id = "right">
 		<!--시계-->
 		<div id = "clock">			
+			<div class="clock_inner">
+
+			</div>
 		</div>
 		<!--최근 게시물-->
 		<div id = "latest">
