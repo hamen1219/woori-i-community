@@ -16,7 +16,7 @@
 			$query = [
 				'from'  => 'board',
 				'where' => ['cat' => '정모'],
-				'limit' => 5,
+				'limit' => 6,
 				'sort'  => ['created', 'desc']
 			];
 			$rs = $this->result->get_list($query);

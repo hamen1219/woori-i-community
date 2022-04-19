@@ -301,7 +301,7 @@ nav a:hover{
 
 /* 메뉴 슬라이드 및 내부 테이블 */
 .slide_menu{			
-	background-color: ghostwhite;
+	background-color: white;
 	width: 100%;
 	height: 300px;			
 	position: absolute;

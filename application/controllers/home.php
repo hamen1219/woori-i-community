@@ -586,6 +586,7 @@
 				<button onclick="get_ajax('공지사항')">공지사항</button>
 				<button onclick="get_ajax('자유게시판')">자유게시판</button>
 				<button onclick="get_ajax('건의사항')">건의사항</button>
+				<div class="bottom"></div>
 			</div>
 				
 

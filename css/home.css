@@ -49,7 +49,8 @@ html{
 	font-size: 20px;
 }   
 .ajax_button{
-	background-color: rgba(20,20,20,0.2) !important;
+	background-color: #337ab7 !important;
+	color: white;
 }
 /* section : 본 페이지 각종 컨텐츠 */
 section{
@@ -84,7 +85,7 @@ section hr{
 	padding: 5px;
 }
 #notice h4{
-	background-color: rgba(20,20,20,0.15);
+	background-color: #66c971;
 	padding: 4px;
 	padding-left: 10px;
 	margin-bottom: 20px;
@@ -99,11 +100,7 @@ section hr{
 	display: inline-block;
 	margin-top: 5px;
 }
-#notice:hover{
-	background-color: rgba(20,20,20,0.1);
-	transition: all 0.2s
-	
-}
+
 #special_div{
 	background-color: black;
 	color: white;
@@ -253,7 +250,9 @@ section hr{
 	box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
 }
 #board_meeting>div{
-	background-color: rgba(20,20,20,0.12);
+	background-color: rgba(20,20,20,0.05);
+	height: 320px;
+	position: relative;
 }
 #container{
 	width: 30%;			
@@ -273,10 +272,10 @@ section hr{
 	text-align: center;			
 }
 #meeting table tr{
-	transition: all 0.2s;
+	transition: all 0.1s;
 }
 #meeting table th{
-	background-color: rgba(255,255,255,0.2);
+	/* background-color: rgba(255,255,255,0.2); */
 	border-bottom: 1px solid white;
 	height: 30px;
 }
@@ -284,8 +283,20 @@ section hr{
 	border-bottom: 1px solid white;
 	height: 40px;
 }
+
+#meeting table a{
+	display: block;
+}
+#meeting table tr:first-child~tr td{
+	background-color: white;
+	border-bottom: 1px solid lightgray !important;
+}
 #meeting table tr:first-child~tr:hover{
-	background-color: rgba(255,255,255,0.3) !important;
+	background-color: rgba(20,20,20,0.1) !important;
+}
+.meeting_bottom{
+	position: absolute;
+	bottom: 10px;
 }
 
 .hide{
@@ -299,14 +310,18 @@ section hr{
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-color: snow;
-	padding-top: 130px;
+	background-color: #282A35!important;
+	padding-top: 105px;
+	
 }
 #map_none p{
 	text-align: center;
 	width: 50%;
+	height: 100px;
 	margin-left: 25%;
-	background-color: rgba(20,20,20,0.15);			
+	padding-top: 37px;
+	color: white;
+	background-color: rgba(255,255,255,0.2);			
 }
 
 #map_title{
@@ -339,22 +354,30 @@ section hr{
 	float: left;
 }
 #btn_group{
-	height: 33px;
+	height: 31px;
 	width: 100%;
 	border: 1px solid lightgray;
 	text-align: center;
 	overflow: hidden;
+
 }
 #btn_group button{
-	width: 32%;
+	width: 33.33%;
 	height: 30px;
 	display: inline-block;
 	border: 0;
 	background-color: transparent;
+	font-weight: 600 !important;
+	transition: all 0.05s;
+	float: left;
+}
+.bottom {
+	clear: both;
 }
 #btn_group button:hover{
-	border-bottom: 5px solid gray;
-	color: gray;
+	/* border-bottom: 5px solid gray; */
+	color: white;
+	background-color: #373f57 !important;
 }
 
 #mini_table{
@@ -370,7 +393,9 @@ section hr{
 	width: 40%;
 }
 #mini_table th{
-	background-color: rgba(20,20,20,0.16);
+	background-color: #337ab7;
+	color: white;
+	font-weight: 600;
 }
 #mini_table tr{
 	height: 40px;
@@ -382,12 +407,12 @@ section hr{
 }
 
 #mini_table tr:last-child{
-	border: 2px solid silver;
+	border: 1px solid lightgray;
 	background-color: rgba(20,20,20,0.03);
-	transition: all 0.3s;
+	transition: all 0.1s;
 }
 #mini_table tr:last-child:hover{
-	background-color: gray !important;
+	background-color: #5290ff !important;
 	border: 0;
 }
 #mini_table tr:last-child:hover a{
@@ -436,7 +461,8 @@ section hr{
 	padding: 10px;
 	padding-bottom: 40px;
 	margin-bottom: 160px;
-	background-color: #666;
+	background-color: #444;
+	/* background-color: #666; */
 }
 	
 #board_gallary h3{
@@ -497,16 +523,18 @@ section hr{
 	padding-bottom: 30px;
 	margin-bottom: 50px;
 	margin-top: 150px;
-	background-color: rgb(51, 103, 214, 0.2);
+	/* background-color: rgb(51, 103, 214, 0.2); */
+	background-color: #ebaa00;
 	box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
 }
 #learn_div h5{
 	text-align: center;
 	margin-bottom: 10px;
-	background-color: rgba(255,255,255,0.1);
+	background-color: rgba(255,255,255,0.8);
 	width: 100%;
+	height: 60px;
+	padding-top: 15px;
 	
-	padding: 5px;
 	box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
 }
 
@@ -560,7 +588,7 @@ section hr{
 	box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
 }
 #mov:hover{
-	background-color: rgba(99,36,189,0.5);
+	background-color: rgba(99,36,189,0.8);
 	color: white;
 }
 #text{
@@ -591,7 +619,7 @@ section hr{
 }
 #text h1:hover{
 	font-size: 65px;
-	color: purple;
+	color: white;
 }
 #mov_group{		
 	width: 100%;

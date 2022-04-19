@@ -232,7 +232,7 @@
 			</div>
 			<!--정모 게시물 있을 경우-->
 			<div id = "meeting">
-				<?php if($meeting): ?>
+				<?php if(!empty($meeting)): ?>
 					<table>
 						<tr>
 							<th>장소</th>
@@ -251,7 +251,7 @@
 						</tr>
 					<?php endforeach; ?>
 					</table>
-					<p> * 장소명 클릭하여 지도정보 확인</p>
+					<p class="meeting_bottom"> * 장소명 클릭하여 지도정보 확인</p>
 
 				<!--정모 게시물 없을 경우-->
 				<?php else: ?>
