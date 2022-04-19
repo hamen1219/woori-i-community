@@ -1,0 +1,988 @@
+html{
+	scroll-behavior: smooth;
+}
+
+#main_slide, #main_slide>div{
+	width: 100%;
+	height: 560px;
+	background-color: ghostwhite;
+	overflow: hidden;    
+	z-index: 0;
+}
+#main_slide img{    
+	width: 100%;    
+	background-size: cover;  
+}
+
+/* 슬라이드 앞,뒤 버튼 */
+#main_slide .slick-prev{
+    left:3%;    	
+    z-index: 1;    
+}
+#main_slide .slick-next{
+	right:3%;    	
+    z-index: 1;    
+} 
+
+
+/* 제목 및 h2, p태그 */
+.title_group{ 
+	position: absolute;
+	top:190px;
+	z-index: 1;
+	height: auto;
+	margin-top: 10px;
+	text-align: center;
+
+	
+	width: 100%;
+	background-color: rgba(255,255,255,0.5);    
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.title_group h2{
+	margin-bottom: 10px;
+	font-family: 'Noto Serif KR', serif;	
+}
+.title_group p{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 20px;
+}   
+.ajax_button{
+	background-color: rgba(20,20,20,0.2) !important;
+}
+/* section : 본 페이지 각종 컨텐츠 */
+section{
+	padding: 20px;
+	height: auto;
+	min-height: 600px;
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 50px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	border: 1px solid lightgray;
+	transition: all 1s;
+}
+section	h3{
+	font-weight: 700;
+}
+
+section hr{
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+/* 상단 intro : 관리자 인사 문구 및 유저/게시판 랭킹 */
+#notice{		
+	height: auto;
+	min-height: 130px;
+	width: 100%;
+	margin-bottom: 70px;
+	border: 1px solid gray;
+	box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+	transition: all 0.2s; 
+	padding: 5px;
+}
+#notice h4{
+	background-color: rgba(20,20,20,0.15);
+	padding: 4px;
+	padding-left: 10px;
+	margin-bottom: 20px;
+}
+#notice h5{
+	margin-left: 10px;
+}
+
+#notice p{
+	margin-left: 10px;
+	width: 70%;
+	display: inline-block;
+	margin-top: 5px;
+}
+#notice:hover{
+	background-color: rgba(20,20,20,0.1);
+	transition: all 0.2s
+	
+}
+#special_div{
+	background-color: black;
+	color: white;
+	padding-top: 20px;
+	padding-left: 20px;
+	width: 100%;
+	min-height: 150px;
+	padding-bottom: 20px;
+}
+#special_div *{
+	font-family: 'East Sea Dokdo', cursive;
+	font-size: 30px;
+}
+#special_div_title h4{
+	margin-right: 10px;
+	font-weight: 600;
+}
+#special_div_title *{
+	display: inline-block;
+
+}
+#special_div h4{
+	font-size: 40px;
+}
+
+#m_slide_wrap{
+	display: none;
+}
+#m_header h3{
+	font-family: 'Julius Sans One', sans-serif;	
+	font-weight: 0 !important;
+}
+
+#rank{
+	height: 100px;
+	width: auto;
+	overflow: hidden;
+	margin: 0;
+	display: inline-block;	
+}
+#rank .slick-slide{
+	padding-left: 15%;
+}
+
+.slide_img_cut{
+	width: 80px;
+	height: 80px;
+	margin: 10px;
+	overflow: hidden;
+	border-radius: 100px;
+	background-color: white;
+	float: left;
+	text-align: center;
+}
+.slide_info{
+	float: left;		
+	height: 80px;	
+	width: auto;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+.slide_img_cut img{
+	height: 100%;
+	width: auto;			
+	display: inline;
+}
+
+.slide_info_title{
+	display: block;
+	background-color: lightgray;
+	border-radius: 10px;
+	border-top-left-radius: 0;
+	padding-left: 15px;
+	padding-right: 20px;
+}
+.slide_info_title svg{
+	position: relative;
+	bottom: 2px;
+	color: yellow;
+}
+
+.user_id{
+	border-radius: 30px;
+	padding: 5px;
+	font-size: 30px;
+}
+
+.total_num{
+	background-color: skyblue;
+	border-radius: 30px;
+	margin-left: 10px;
+	padding: 6px;
+	font-size: 20px;
+}
+
+#rank_div{
+	width: 100%;
+	height: 150px;
+	overflow: hidden;
+	border: 1px solid lightgray;	
+	margin-bottom: 50px;
+}
+#rank_div>div{
+	display:inline-block;
+	height: auto;
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+#rank_div>div:last-child{
+	width: 50%;
+}
+#rank_div>div>div{
+	display: inline-block;
+	text-align: center;
+}
+#rank_div>div>div *{
+	display:inline-block;
+}
+#rank_div>div>div>h1{
+	margin-top: 25px;	
+	display:inline-block;	
+}
+#rank_div>div>p{
+	font-weight: 1000;
+	font-size: 20px;
+	border-left: 6px solid lightblue;
+	margin-bottom: 10px;
+}
+
+
+
+
+/* 중간 게시판 모음 관련 (ajax 게시판) */
+
+#board_group{
+	height: auto;
+}
+
+#board_meeting{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin-bottom: 30px;
+	border: 1px solid lightgray;
+	padding: 20px;
+	box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+}
+#board_meeting>div{
+	background-color: rgba(20,20,20,0.12);
+}
+#container{
+	width: 30%;			
+	float: left;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+}
+#meeting{
+	width: 60%;
+	padding: 10px;
+	float: right;
+}
+#meeting table{
+	width: 100%;
+	margin-bottom: 10px;
+	text-align: center;			
+}
+#meeting table tr{
+	transition: all 0.2s;
+}
+#meeting table th{
+	background-color: rgba(255,255,255,0.2);
+	border-bottom: 1px solid white;
+	height: 30px;
+}
+#meeting table td{
+	border-bottom: 1px solid white;
+	height: 40px;
+}
+#meeting table tr:first-child~tr:hover{
+	background-color: rgba(255,255,255,0.3) !important;
+}
+
+.hide{
+	display: none;
+}
+.push{
+	background-color: skyblue;
+	color: white;
+}
+#map_none{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: snow;
+	padding-top: 130px;
+}
+#map_none p{
+	text-align: center;
+	width: 50%;
+	margin-left: 25%;
+	background-color: rgba(20,20,20,0.15);			
+}
+
+#map_title{
+	width: 100%;
+	height: auto;
+	min-height: 50px;
+	background-color: rgba(20,20,20,0.5);
+	text-align: center;
+	padding-top: 13px;
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+	color: white;
+}
+.meeting_map_btn{
+	border-radius: 5px;
+	border: 1px solid lightgray;
+	padding: 3px;
+	transition: all 0.2s;
+}
+.meeting_map_btn:hover{
+	background-color: rgba(20,20,20,0.2);
+}
+
+
+
+#board_ajax{
+	height: 400px;
+	width: 49%;
+	float: left;
+}
+#btn_group{
+	height: 33px;
+	width: 100%;
+	border: 1px solid lightgray;
+	text-align: center;
+	overflow: hidden;
+}
+#btn_group button{
+	width: 32%;
+	height: 30px;
+	display: inline-block;
+	border: 0;
+	background-color: transparent;
+}
+#btn_group button:hover{
+	border-bottom: 5px solid gray;
+	color: gray;
+}
+
+#mini_table{
+	margin-top: 20px;
+	width: 95%;
+	margin-left: 2.5%;
+	text-align: center;
+}
+#mini_table a{
+	display: block;
+}
+#mini_table td:nth-child(2){
+	width: 40%;
+}
+#mini_table th{
+	background-color: rgba(20,20,20,0.16);
+}
+#mini_table tr{
+	height: 40px;
+	border-bottom: 1px solid lightgray;
+}
+#mini_table tr:first-child~tr:hover{
+	background-color: rgba(20,20,20,0.1);
+	cursor: pointer;
+}
+
+#mini_table tr:last-child{
+	border: 2px solid silver;
+	background-color: rgba(20,20,20,0.03);
+	transition: all 0.3s;
+}
+#mini_table tr:last-child:hover{
+	background-color: gray !important;
+	border: 0;
+}
+#mini_table tr:last-child:hover a{
+	color: white;
+}
+
+
+
+
+/* 공지 슬라이드(board_alert) 및 슬라이드 버튼 관련 */
+#board_alert{
+	height: 400px;
+	width: 49%;
+	display: inline-block;
+	margin-bottom: 50px;
+	float: right;
+}
+.slick-arrow{
+	display: none;
+}
+#alert_slide{
+	width: 360px;
+	height: 335px;
+	margin:auto;
+	overflow: hidden;
+	background-color: ghostwhite;
+	border: 1px solid lightgray;
+	padding: 10px;
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+#alert_slide>div{
+	border: 2px solid white;
+	margin-top: 10px;
+}
+#alert_slide .slick-dots{
+	top: 0px;	
+	z-index: 1;
+}
+
+/* 포토갤러리 슬라이드 */
+#board_gallary{	
+	clear: both;
+	height: auto;
+	width: 100%;				
+	padding: 10px;
+	padding-bottom: 40px;
+	margin-bottom: 160px;
+	background-color: #666;
+}
+	
+#board_gallary h3{
+	color: white;
+}
+#board_gallary hr{
+	background-color: lightgray;
+}
+
+
+#gallary_slide{
+	margin-left: 5%;
+	width: 90%;
+	height: auto;
+	margin: auto;
+}
+.gallary_img_cut{
+	overflow: hidden;
+	width: 23%;
+	height: 250px;
+	margin: 5px;
+	text-align: center;
+	background-color: black;
+	box-shadow: 0 8px 38px rgba(255,255,255,0.3), 0 5px 12px rgba(255,255,255,0.3);
+
+}
+
+.gallary_img_cut:hover .wrap_img{
+	display: block;	
+}
+
+#gallary_slide img{
+	width: auto;
+	height: 100%;
+	z-index: 1;
+	display: inline-block;
+	transition: all 0.2s;
+}
+#gallary_slide img:hover{
+	height: 110%;
+	width: auto;
+}
+
+.wrap_img{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,0.2);
+	display: block;
+	float: left;
+	transition: all 0.2s;
+}
+
+/* 학습 게시판 div 및 svg 아이콘 */
+#learn_div{
+	position: relative;
+	height: auto;
+	width: 100%;		
+	padding-bottom: 30px;
+	margin-bottom: 50px;
+	margin-top: 150px;
+	background-color: rgb(51, 103, 214, 0.2);
+	box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+}
+#learn_div h5{
+	text-align: center;
+	margin-bottom: 10px;
+	background-color: rgba(255,255,255,0.1);
+	width: 100%;
+	
+	padding: 5px;
+	box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+}
+
+#truck svg{
+	width: 100px;
+	height: 100px;
+	margin-left: 46%;
+	margin-bottom:120px;
+	transition: all 0.5;
+}
+/* 학습 게시판 제목 div */
+#learn_title{
+	height: 200px;
+	width: 90%;
+	margin: auto;
+	background-color: lightblue;
+	text-align: center;
+	padding-top: 50px;
+	font-family: 'Do Hyeon', sans-serif;
+	transition: all 0.5s;
+	position: relative;
+	bottom: 120px;
+	box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+}
+#learn_title h1{
+	font-size: 50px;
+	font-family: 'Jua', sans-serif;
+}
+#learn_title p{
+	font-size: 20px;	
+	font-family: 'Jua', sans-serif;
+}
+/* 학습 게시판 동영상 및 설명 관련 */
+#mov{
+	width: 100%;
+	height: auto;
+	display: inline-block;		
+	margin-bottom: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	transition: all 0.3s;
+	box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+
+}
+#mov iframe{
+	width: 500px;
+	height: 300px;
+	display: inline-block;
+	float: left;
+	transition: all 0.3s;
+	box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+}
+#mov:hover{
+	background-color: rgba(99,36,189,0.5);
+	color: white;
+}
+#text{
+	width: 38%;
+	height: 300px;
+	display: inline-block;
+	float: left;
+	margin-left: 11%;
+
+}
+#text h1{
+	font-family: 'Anton', sans-serif;
+	font-style: italic;
+	font-size: 50px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	transition: all 0.3s;
+}
+#text h1:first-child{
+	text-align: left;
+}
+#text h1:nth-child(2){
+	text-align: center;
+}
+#text h1:last-child{
+	text-align: right;		
+	margin-top: 30px;
+}
+#text h1:hover{
+	font-size: 65px;
+	color: purple;
+}
+#mov_group{		
+	width: 100%;
+	height: auto;
+	min-height: 200px;
+	margin-bottom: 50px;
+	display: inline-block;
+	text-align: center;
+	padding-bottom: 10px;		
+	padding-top: 12px;
+	background-color: purple;
+	box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+	transition: all 0.3s;
+}
+#mov_group:hover{		
+	background-color: brown;
+}
+#mov_group iframe{
+	width: 22%;
+	height: auto;
+	margin: 1%;
+	transition: all 0.2s;
+}
+
+/* 협력업체 슬라이드 */
+#company{
+	width: 100%;
+	height: 190px;	
+}
+#company_slide{
+	width: auto;
+	height: 110px;	
+	margin-bottom: 50px;
+	margin-top: 0;
+	padding-top: 5px;
+	border: 1px solid lightgray;
+	overflow: hidden;
+	box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+
+}
+#company_slide a{
+	height: 100px;
+	width: 110%;
+	overflow: hidden; 	
+	text-align: center;
+}
+#company img{
+	width: auto;
+	height: 100px;
+	display: inline-block;		
+}
+
+#board_group>div{
+	margin-top: 50px;
+}
+
+/* 반응형 */
+@media(max-width: 1500px){
+	#text{
+		margin-left: 7%;
+	}
+	#slide_img1{
+		width: 110% !important;
+	}
+}
+@media(max-width: 1400px){
+	#slide_img1{
+		width: 130% !important;
+	}
+}
+
+
+@media(max-width: 1200px){
+
+	#main_slide, #main_slide>div{
+		height: 360px;
+	}
+	.title_group{
+		top: 85px;
+	}
+	#text{
+		display: none;
+	}
+	#mov{
+		text-align: center;
+		width: 100%:;
+	}
+	#mov iframe{
+		width: 90%;
+		margin-left: 5%;		
+	}
+	
+}
+
+@media(max-width: 1250px){
+	#board_ajax table td:last-child, #board_ajax table th:last-child{
+		display: none;
+	}   
+
+	#board_ajax table th:first-child{
+		width: 30%;
+	} 
+	#meeting{
+		width: 67%;
+	}
+	#meeting table th:last-child, #meeting table tr td:nth-child(3){
+		display: none;
+	}
+	#meeting table th:first-child{
+		width: 30%;
+	}
+	#map_none p{
+		width: 90%;
+		margin-left: 5%;
+	}
+
+}
+
+
+@media(min-width: 1021px) and (max-width: 1300px){
+	section{
+		width: 90%;
+		margin-left: 5%;
+	}   
+}
+
+
+@media(max-width: 1080px){
+	section{
+		width: 100%;
+		margin-left: 0;
+	}
+	#main_slide img{    
+		position: relative;
+		width: 155%;
+    	background-size: cover;	    	
+    } 
+    #board_meeting{
+    	height: auto;
+    	text-align: center;    	
+    }
+    #board_meeting>div{
+    	display: block;
+    }
+    #container{
+    	display: inline-block;
+    	width: 80%;
+    	height: 300px !important;
+    	margin-left: 10%;   
+    }
+    #meeting{
+    	width: 100%;
+    	margin-top: 20px;
+    }
+
+    #board_meeting table:last-child{
+    	display: none;
+    }
+
+
+}
+
+@media(min-width: 600px) and (max-width: 1100px){
+
+	#rank_div{
+		height: auto;
+	}
+	#rank_div>div{
+		width: 50%;
+	}
+	
+	#rank_div>div>div>h1{
+		margin: 0;
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+	#rank_div>div:last-child{
+		width: 100%;
+		display: block;
+		border-top:  1px solid lightgray;
+	}
+	#rank_div .slick-slide{
+		margin-left: 15%;
+		height: auto;
+	}
+
+	#mov_group{
+    	
+    	height: auto;
+    	padding-bottom: 5px;    	
+    }
+    #mov_group iframe{
+    	width: 40%;
+    }
+
+}
+
+
+@media(max-width: 900px) 
+{	
+	section{
+		border: 0;
+		padding: 0;
+		padding-top: 30px;
+		width: 100%;
+
+	}
+
+	#main_slide,#main_slide>div{
+		display: none;
+	}
+	#m_slide_wrap{
+		display: block;
+	}
+	#m_slide{
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
+		display: block;
+	}
+	#m_slide img{
+		width: 100%;
+		height: auto;
+	}
+
+	#m_slide_title{
+		position: absolute;		
+		z-index: 1;
+		font-weight: 700;
+		font-family: 'Noto Serif KR', serif;	
+		height: 200px;
+		width: 100%;
+		text-align: center;
+	}
+	#m_slide_title p{
+		color: black;
+		font-size: 20px;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255,255,255, 0.5);
+		padding-top: 85px;
+	}
+	.title_group{
+    	display: none;
+    }
+
+    #notice{
+		display: none;
+	}
+
+	#rank_div{
+		height: auto;
+		padding: 5px;
+	}
+  	#rank_div>div{
+		display: block;
+		width: 100%;
+	}
+	#rank_div>div>p{
+		border: 1px solid lightgray;
+		display: block;
+		background-color: rgba(20,20,20,0.05);
+	}
+	#rank_div div div h1{
+		margin: 0;
+		margin-top: 10px;
+		margin-bottom: 30px;
+	}
+
+
+	#board_group{
+		margin: 0;
+	}
+    #board_ajax, #board_alert{
+    	display: block;
+    	width: 100%;
+    }
+
+    #truck{
+    	display: none;
+    }
+    #learn_div{
+    	padding: 0;
+    	margin-bottom: 30px;
+    	margin-top: 80px;
+    }
+    #learn_title{
+    	height: 100px;
+    	padding-top: 30px;
+    	bottom: 50px;
+    	box-shadow: none;
+    	box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+    }
+    #learn_title h1{
+    	font-size: 40px;
+
+    }
+    #learn_title p{
+    	display: none;
+    }
+    
+    #mov_group{
+    	height: auto;
+    	padding-bottom: 5px;
+    }
+    #text{
+    	display: none;
+    }
+
+    #mov_group iframe{
+    	float: left;
+    	width: 47%;
+    }
+
+    #rank_div>div:last-child{
+    	width: 100%;
+    }  
+    #rank .slick-slide{
+    	padding-left: 10%;
+    }
+
+}
+
+
+ @media(max-width: 840px){
+ 	section h3{
+ 		padding: 10px;
+ 		background-color: lightblue;
+ 		margin-bottom: 10px;
+ 		box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+ 	}
+ 	#board_gallary h3{
+ 		background-color: rgba(255,255,255,0.5);
+
+ 	}
+ 	#board_group>div{
+ 		margin-top: 30px;
+ 	}
+ 	section hr{
+ 		display: none;
+ 	}
+ 	#learn_div{
+ 		margin-top: 100px;
+ 		margin-bottom: 50px;
+ 	} 	
+
+ 	#learn_title{
+ 		width: 100%;
+ 		margin:0;
+ 	}
+
+	#board_group>div{
+
+		overflow: hidden;
+		height: auto;
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	#board_gallary{
+		margin-top: 50px;
+	}
+	#container{
+		width: 100% ;
+		border: 0;
+		margin: 0;
+	}
+	#company{
+		text-align: center;
+	}
+	#special_div{
+		text-align: center;
+	}
+}
+@media(max-width: 600px){
+	#m_slide img{
+		width: 115%;
+	}
+}
+@media(max-width: 438px){
+	#learn_title{
+		padding-top: 30px;
+	}
+	#learn_title h1{
+		font-size: 30px;
+	}
+}
+@media(max-width: 328px){
+	#learn_title{
+		padding-top: 10px;
+	}
+
+}	
+

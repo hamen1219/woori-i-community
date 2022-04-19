@@ -1,0 +1,146 @@
+@font-face{
+    font-family: 'ModernHMedium';
+    src : url('/font/ModernHMedium.ttf');
+}
+body *{
+    font-family: 'ModernHMedium';
+}
+
+*{
+	margin: 0;
+}
+section{
+	text-align: center;
+	background-color: rgba(20,20,20,0.1);
+}
+#msg_title{
+	background-color: #333;
+	color: white;
+	height: 100px;
+	text-align: center;
+	font-size: 30px;
+	padding-top: 40px;
+	margin-bottom: 20px;
+}
+#msg_title svg{
+	width: 30px;
+	height: 30px;
+	position: relative;
+	top: 2px;
+	margin-right: 5px;
+}
+.teacher_img_cut{
+	width: 55px;
+	height: 55px;
+	border-radius: 100px;
+	overflow: hidden;
+	float: left;
+	margin-left: 10px;
+	text-align: center;
+}
+.teacher_img_cut img{
+	height: 100%;
+	width: auto;
+	display: inline-block;
+}
+.msg_list{
+	min-height: 100px;
+	margin-top: 15px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.unread{
+	background-color: lightgray;
+}
+.teacher_info{
+	width: 100%;
+	height: 60px;
+}
+.teacher_info>div{
+	float: left;		
+}
+.teacher_info>div *{
+	padding: 0;
+	margin: 0;
+}
+
+.teacher_info>div h3{
+	margin-top: 5px;
+}
+
+.created{
+	font-size: 12px;
+}
+
+.bottom{
+	clear: both;
+}
+.contents{
+	width: 88%;
+	min-height: 100px;
+	border: 2px solid gray;
+	border-radius: 20px;
+	border-top-left-radius: 0;
+	margin-left: 6%;
+	background-color: ghostwhite;
+	overflow: hidden;
+	padding: 8px;
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.sub_title{
+	margin-bottom: 10px;
+}
+
+#btn_group{
+	width: 100%;
+	height: auto;
+}
+.top_btn{
+	width: 33.33%;
+	height: 30px;
+	margin-bottom: 15px;
+	padding-top: 5px;
+	display: inline-block;
+	float: left;
+	background-color: rgba(20,20,20,0.1);
+	transition: all 0.2s;
+}
+
+.top_btn:hover{
+	background-color: rgba(20,20,20,0.3);
+	cursor: pointer;
+}
+
+.btn_click{
+	background-color: rgba(20,20,20,0.3);
+	color: white;
+	font-weight: 600;
+}
+.msg_wrap{
+	display: none;
+	height: 538px;
+}
+.list_wrap{
+	background-color: white;
+	height: 450px;
+	overflow-y: auto;
+}
+.msg_show{
+	display: block;
+}
+.empty_msg{
+	margin-top: 200px;
+}
+hr{
+	border: 1px solid lightgray;
+}
+.read{
+	background-color: lightyellow;
+	border: 2px solid orange;
+}
+.teacher_sub_info{
+	text-align: left;
+	margin-left: 10px;
+}

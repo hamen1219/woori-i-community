@@ -1,0 +1,72 @@
+#container {overflow:hidden;height:400px;position:relative; border-top: 0;}
+#btnRoadview,  #btnMap {position:absolute;top:5px;left:5px;padding:7px 12px;font-size:14px;border: 1px solid #dbdbdb;background-color: #fff;border-radius: 2px;box-shadow: 0 1px 1px rgba(0,0,0,.04);z-index:1;cursor:pointer;}
+#btnRoadview:hover,  #btnMap:hover{background-color: #fcfcfc;border: 1px solid #c1c1c1;}
+#container.view_map #mapWrapper {z-index: 1;}
+#container.view_map #btnMap {display: none;}
+#container.view_roadview #mapWrapper {z-index: 0;}
+#container.view_roadview #btnRoadview {display: none;}
+
+
+#map_wrap{
+	margin-bottom: 20px;
+	box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+
+}
+
+#map_icon{
+	margin-bottom: 7px;
+	margin-right: 5px;
+}
+
+#addr_str{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 2;
+	background-color: rgba(50,70,200,0.8);
+	text-align: center;
+	color: white;
+	padding: 5px;
+	border-radius: 5px;
+}
+#addr_str p{
+	background-color: ghostwhite;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	color: black;
+}
+#container{
+	height: 550px;
+}
+
+#infowindow{	
+	width: 200px;
+	height: 130px;
+	background-color: #ff8d5a;
+	position: relative;
+	text-align: center;
+}
+#infowindow h5, #infowindow a, #infowindow p, #infowindow hr{
+	position: relative;
+	top: 20px; 
+}
+#infowindow p{
+	font-size: 12px;
+}
+#infowindow a{
+	top: 30px;
+	background-color: rgba(255,255,255,0.5);
+	padding: 5px;
+	color: blue;
+	transition: all 0.2s;
+}
+#infowindow a:hover{
+	background-color: rgba(255,255,255,0.4);
+}
+
+
+#map div div div div{
+	padding: 2px;
+	border: 0 !important;
+
+}

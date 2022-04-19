@@ -1,0 +1,164 @@
+#f1 {
+    margin-left: 30%;
+    padding: 20px;
+    padding-top: 30px;
+    width: 40%;
+    height: 400px;
+    margin: auto;
+    background-color: rgba(20, 20, 20, 0.05);
+}
+
+section {
+    width: 100%;
+    height: 500px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: all 1s;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#div_id>p,
+#div_pw>p {
+    display: inline-block;
+    float: left;
+}
+
+#tid,
+#tpw {
+    width: 80%;
+    float: right;
+}
+
+#div_id,
+#div_pw {
+    width: 55%;
+    height: 40px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#btn_group {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#btn_group button {
+    height: 70px;
+    width: 49%;
+    border-radius: 0;
+    transition: all 0.2s;
+}
+
+#btn_group button:first-child {
+    border: 0;
+}
+
+#btn_group button:last-child {
+    border: 1px solid gray;
+}
+
+#btn_group button p {
+    display: inline-block;
+    font-size: 20px;
+}
+
+#btn_group button:first-child {
+    background-color: #0062cc;
+    color: white;
+}
+
+#btn_group button:last-child {
+    background-color: white;
+    color: black;
+}
+
+#btn_group button:first-child:hover {
+    background-color: rgb(18, 69, 171);
+}
+
+#btn_group button:last-child:hover {
+    background-color: rgb(180, 180, 180);
+}
+
+#f1 hr {
+    margin-bottom: 20px;
+}
+
+#f1 p {
+    margin-top: 5px;
+}
+
+@media(max-width: 1300px) {
+    section {
+        margin-left: 5%;
+        width: 90%;
+    }
+    #f1 {
+        width: 60%;
+    }
+}
+
+@media(max-width: 900px) {
+    section {
+        margin-left: 0;
+        width: 100%;
+    }
+    #f1 {
+        width: 80%;
+    }
+}
+
+@media(max-width: 600px) {
+    section {
+        background-color: transparent;
+        border-bottom: 1px solid lightgray;
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
+    section hr {
+        display: none;
+    }
+    #div_id,
+    #div_pw,
+    #btn_group {
+        width: 90%;
+        margin-left: 5%;
+    }
+    #div_id input,
+    #div_pw input {
+        width: 100%;
+    }
+    #div_id p,
+    #div_pw p {
+        display: none;
+    }
+    #f1 {
+        width: 100%;
+        height: auto;
+    }
+    #f1 hr {
+        width: 70%;
+        margin-left: 15%;
+    }
+    #btn_group {
+        margin-bottom: 30px;
+    }
+    #btn_group button {
+        width: 49%;
+    }
+    #btn_group button p {
+        display: inline-block;
+        font-size: 15px;
+    }
+}
+
+
+/*

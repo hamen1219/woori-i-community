@@ -1,0 +1,525 @@
+
+		/* basic */
+		*{margin: 0; padding: 0; list-style: none; text-decoration-line: none;}
+		a{color: black;}
+		h3{
+			-webkit-transition: margin-left 0.7s;
+        	transition: margin-left 0.7s;
+        	margin-left: 10px;
+		}
+		h3:hover{		
+			margin-left: 20px;
+		}
+
+		/* header */
+		header{
+			height: 100px;
+			width: 100%;
+			background-color: white;
+			position: sticky;
+			top: 0;
+			border-bottom: 3px solid white;	
+			z-index: 1;
+		}		
+		header>div{
+			float: left;
+			text-align: center;
+			height: 100%;
+		}
+		/* header 내 3개의 div */
+		#d1{
+			width: 15%;
+			overflow: hidden;
+			background-color: white;
+		}
+		#d2{
+			width: 65%;
+		}
+		#d3{
+			height: 100px;
+			width: 20%;		
+			background-color: white;
+			-webkit-transition: background-color 0.5s;
+        	transition: background-color 0.5s;
+		}
+		#d3:hover{
+			background-color: rgba(20,20,20,0.1);
+		}
+	
+		/*d2 내 notice 틀*/
+		#notice{
+			position: absolute;
+			top: 5px;
+			width: 62%;
+			height: 60px;			
+			margin: auto;
+			margin-left: 15px;
+		}
+		#notice>div{		
+			height: 40px;
+			margin-top: 10px;
+			border-radius: 10px;
+			padding-top: 5px;
+			box-shadow: 1px 1px 4px gray;
+
+			-webkit-transition: box-shadow 0.3s;
+        	transition: box-shadow 0.3s
+		}
+		#notice>div:hover{
+			box-shadow: 5px 5px 10px gray;
+		}
+		#d2 svg{
+			margin-left: 10px;
+			margin-right: 5px;
+			margin-top: 5px;
+			height: 20px;
+			width: 20px; 
+		}
+		#d2 svg~p{
+			font-size: 17px;
+		}
+	    #d2 svg, #d2 svg~p{
+			display: inline-block;
+			float: left;
+		}
+		/* 사용자 정보 보여주는 d3 */
+		#d3 *{ 			
+			padding: 0; margin: 0;
+		}
+		#d3>div:nth-child(1){	
+			width: 30%;
+			height: 100px;
+			float: left;
+
+		}
+		#d3>div:nth-child(2){
+			padding-top: 10px;
+			float: left;
+			width: 70%;
+			height: 100px;
+		}
+		#d3 img{
+			width: 100%;			
+		}
+		/* 사진 자르기 div */
+		#d3 #cut{
+			border-radius: 100px;
+			width: 70px;
+			height: 70px;
+			margin: 10px;
+			overflow: hidden;
+		}
+		#d3>div *{
+		 	display: inline-block;
+		}
+		#d3 svg{
+			width: 30px;
+			height: 30px;
+			margin-bottom: 5px;
+		}		
+		/* navigation bar */
+		nav{
+			height: 25%;
+			width: 100%;
+			background-color: white;
+			border: 1px solid lightgray;
+			margin-top: 75px;
+			z-index: 1;
+		}
+		nav *{
+			z-index: 1;
+		}
+		/* nav 내 3개의 버튼들 */
+		nav>div{
+			float: left;
+			width: 33.33%;			
+			height: 100%;
+			background-color: white;
+			-webkit-transition: background-color 0.4s;
+        	transition: background-color  0.4s;
+		}
+		nav>div:hover{
+			background: gray;
+		}
+		/*메뉴2, 메뉴3을 올렸을 때 보여지는 div*/
+		#m2,#m3{
+			position: absolute;
+			width: 100%;
+			height: 230px;
+			background-color: lightgray;
+			visibility: hidden;
+			opacity: 0;
+			left: 0;
+			top : 100px;
+			-webkit-transition: opacity 0.8s;
+        	transition: opacity 0.8s;
+		}
+		#m2_full,#m3_full{
+			position: absolute;
+			width: 100%;
+			height: 800px;
+			background-color: rgba(255,255,255,0.8);
+			visibility: hidden;
+			opacity: 0;
+			left: 0;
+			top : 100px;
+			-webkit-transition: opacity 0.7s;
+        	transition: opacity 0.7s;
+		}
+		#m2_table{
+			margin-top: 30px;
+			margin-right: 28%;
+			margin-left: 22%;
+			width: 50%;
+			height: 110px;
+		}
+		#m3_table{
+			margin-top: 30px;
+			margin-right: 20%;
+			margin-left: 20%;
+			width: 60%;
+			height: 150px;
+		}
+		thead{
+			height: 60px;
+			border-bottom: 1px solid black;
+		}
+
+		#b2:hover #m2, #b2:hover #m2_full{
+			visibility: visible;	
+			opacity: 1;	
+		}
+		#b3:hover #m3, #b3:hover #m3_full{
+			visibility: visible;	
+			opacity: 1;	
+		}
+		/* section */
+		section{		
+			height :3690px;			
+			clear: both;	
+			margin-bottom: 50px;
+		}
+		/* section 내 좌우여백 s1, s3 */
+		#s1{
+			width: 10%;
+			height: 2890px;
+			background-color: white;
+			float: left;		
+		}
+		/* 실 내용 들어가는 s2 */
+		#s2{
+			top: 100px;
+			width: 80%;
+			height: 2830px;		
+			background-color: rgba(20,20,20,0.05);
+			float: left;		
+		}		
+		/*Section 1 : 슬라이드 사진*/
+		#contents1{
+			height: 550px;
+			overflow: hidden;
+			margin: auto;			
+			margin-bottom: 60px;
+			z-index: 0;
+			position: relative;
+		}
+		#jumbotron{
+			position: absolute;
+			top:0px;
+			height: 550px; 
+			width: 100%;
+			background-color:rgba(220,220,220,0.1);
+			z-index: 1;
+		}		
+		/*부트스트랩 슬라이드 사진 글씨 관련*/
+		#s_text1, #s_text2, #s_text3{
+			position: absolute;
+			top: 230px;
+		}
+		#contents1 ol{
+			position: absolute;
+			top : 380px;
+		}
+		#contents1 a{		
+			position: absolute;
+			height: 450px;
+			top: 50px;
+		}
+		#search{
+			width: 250px;
+			margin-top: 10px;
+			margin-left: 10px;
+			float: left;
+		}
+		#btn_search{
+			margin-top: 10px;
+			margin-left: 5px;
+			height: 30px;
+			width: 50px;
+			float: left;
+			padding: 0;
+		}
+		/*슬라이드 사진 하단 div*/
+		#counter_div{
+			margin: auto;
+			margin-top: 30px;
+			margin-bottom: 60px;
+			height: 130px;			
+			background-color: skyblue;
+		}
+		#counter_div *{
+			display: inline-block;
+		}
+		/*s2내 게시판과 배너(other)를 묶는 Contents2 div*/
+		#contents2{
+			width: 100%;
+			height: 900px;
+		}
+		#board{
+			width: 60%;
+			height: 500px;
+			float: left;
+		}
+		#board button{
+			z-index: 0;
+		}
+		/* 공지 사진 슬라이드 넣을 예정 */
+		#other{
+			width: 35%;
+			background-color:silver;
+			height: 500px;
+			float: right;
+		}	
+		/* 갤러리 슬라이드 넣을 예정 */
+		#gal{
+			width: 100%;
+			height: 360px;
+			clear: both;		
+		}
+		#img_box{			
+			width: 100%;
+			height: 250px;
+			background-color: silver;
+		}
+		/* svg truck 위치 조정을 위한 div */
+		#empty{
+			width: 45%;
+			height: 100px;
+			float: left;
+		}
+		/* truck 과 empty 덮는 전체 div */
+		#div_truck{
+			width: 100%;
+			height: 100px;
+			margin-top: 30px;
+			margin-bottom: 70px;
+		}
+		/* truck div */
+		#truck{			
+			width: 100px;
+			height: 100px;
+			float: left;			
+
+			-webkit-transition: width 0.7s;
+        	transition: width 0.7s;
+		}
+		#truck_svg{
+			width: 100px;
+			height: 100px;		
+			float: right;		
+		}
+		#div_truck:hover #truck{
+			width: 50%;
+		}
+		/*Contents3는 제목, 동영상 묶는 div*/
+		#contents3{			
+			width: 100%;
+			height: 520px;		
+		}
+		#title1{
+			height: 250px;
+			width: 95%;
+			margin-left: 2.5%;
+			text-align: center;
+			margin-top: 20px;
+			margin-bottom: 60px;
+			background-color: rgba(100,100,50, 0.4);
+			padding-top: 60px;
+
+			-webkit-transition: background-color 0.5s;
+        	transition: background-color 0.5s;
+		}
+		#title1:hover{
+			background-color: skyblue;
+		}
+		#title1 h1{
+			font-size: 70px;			
+		}
+		#title1 p{
+			margin-top: 25px;
+			font-size: 17px;
+		}
+		#word{
+			width: 45%;
+			display: inline-block;
+			padding: 10px;
+			background-color: ivory;
+			height: 350px;
+			display: inline-block;
+			margin-left: 15px;	
+
+			-webkit-transition: border-bottom 0.3s;
+        	transition: border-bottom 0.3s;		
+		}
+		#word:hover{
+			border-bottom: 30px solid lightgreen;
+		}
+		#word p *{
+			margin-top: 15px;
+		}
+		iframe{
+			float: left;
+			margin-left: 10px;
+		}
+		/* 작은 동영상들 묶는 div */
+		#iframe_group{
+			margin-top: 40px;
+			width: 100%;
+			height: 230px;
+			background: purple;
+			padding-top: 10px;
+		}
+		#iframe_group iframe{
+			width: 30%;
+			height: 200px;
+			margin-left: 2.5%;
+		}
+		#iframe_group iframe:nth-child(3){
+			margin-right: 2.5%;
+		}
+		/*맨위로 가는 버튼*/
+		#topper{
+			height: 60px;
+			width: 60px;
+			position: fixed;
+			background-color: silver;
+			right: 20px;
+			bottom : 20px;
+			border-radius: 20px;
+		
+        	-webkit-transition: height 0.3s;
+        	transition: height 0.3s;
+		}
+		#topper:hover{
+			height: 80px;			
+		}
+		#topper svg{
+			width: 60px;
+			height: 60px;
+			color:  white;
+		}
+		/*banner*/
+		#banner{
+			margin-top: 350px;
+			width: 100%;
+			height: 400px;
+		}	
+		#div1, #div2{
+			height: 260px;
+			width: 50%;
+				float: left;
+		}
+		#div1{
+			width: 45%;
+			margin-left: 5%;
+		}
+		#div2{
+			width: 45%;
+			margin-right: 5%;
+		}
+		#div1, #div2{
+			height: 260px;
+			float: left;
+		}
+		#banner>div>div{
+			width: 100%;
+			height: 130px;
+			border: 1px solid lightgray;
+			background-color: white;
+			overflow: hidden;
+			-webkit-transition: height 0.7s;
+    		transition: height 0.7s;
+		}
+		#banner img{
+			height: 130px;
+			background-size: cover;
+		}
+		#div1>div:hover,#div2>div:hover{
+			height: 260px;
+		}
+		#banner_info{
+			height: 30px;
+			width: 95%;
+			margin-left: 2.5%;
+			margin-bottom: 20px;
+			border: 1px solid silver;
+			clear: both;
+			background-color: white;
+		}	
+		#banner_info svg{
+			margin-left: 10px;
+			margin-right: 5px;
+			margin-top: 5px;
+			float: left;
+		}
+		#banner>div>div>div{
+			margin: 15px;
+			padding-left: 10px;
+			background-color: snow;
+			border: 1px solid silver;
+			border-radius: 10px;
+		}
+		#banner>div p, #banner>div hr{
+			margin:0; padding: 0;
+		}			
+		/*footer*/
+		footer{
+			width: 100%;
+			height: 200px;
+			background-color: gray;
+			padding-top: 30px;
+		}
+		footer>div{
+			width: 80%;
+			margin-left: 10%;		
+			height: 150px;
+		}
+		footer>div>div{
+			float: left;
+		}
+		#footer_img{
+			float: left;
+			height: 100px;
+			width: 200px;
+			background-size: cover;
+			background-image: url("/img/ci_footer.png");
+			margin-top: 15px;
+		}
+		#footer_img+div{
+			float: left;
+			height: 80px;
+			width: 60%;
+			margin-top: 25px;
+			margin-left: 10px;
+			border-left: 10px solid lightgray;
+
+			-webkit-transition: background-color 0.3s;
+        	transition: background-color 0.3s;
+		}
+		#footer_img+div:hover{
+			background-color:lightgray;
+		}				
+		footer p{
+			position: absolute;
+			margin-left: 10px;
+		}		

@@ -1,0 +1,318 @@
+section{
+    padding: 20px;
+    height: auto;
+    min-height: 600px;
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border: 1px solid lightgray;
+    transition: all 1s;
+}
+#list_title{
+    width: 100%;
+    height: 150px;
+    background-image: url('/img/board/1.PNG');
+    
+    background-size: cover;
+    margin-bottom: 30px;
+    padding: 10px;
+    box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 0 12px rgba(133, 133, 133, 0.22);
+}
+#list_title h1{
+    font-size: 45px;
+    font-family: 'Do Hyeon', sans-serif;
+}
+#a_group{
+    margin-top: 57px;
+    background-color: rgba(255,255,255,0.5);
+    padding-left: 5px;
+}
+
+
+#search_alert{
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: lightblue;
+    padding-left: 15px;
+}
+
+#search_bar{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 0 12px rgba(133, 133, 133, 0.22);
+
+}
+#search{
+    width: 270px;
+    border-radius: 0;
+    border: 1px solid lightgray;
+    padding-left: 5px;
+
+}
+#select_group{
+    width: auto;
+    height: auto;
+    float: right;
+}
+#type, #sort{
+    width: 100px;
+    height: 25px;
+    border: 1px solid gray;
+    border-radius: 0;
+}
+#submit{
+    height: 100%;
+    width: 30px;
+    border-radius: 2px;
+    position: relative;
+    background-color: white;
+    border: 1px solid gray;
+    transition: all 0.2s;
+}
+#submit:hover{
+    background-color: lightgray;
+}
+/*검색어 및 count 보여주는 div*/
+#search_info{
+    margin-top: 20px;
+    margin-bottom: 55px;
+    width: 100%;     
+}
+
+#search_msg{
+    float: left;
+    width: 50%;
+}
+#search_msg svg{
+    float: left;
+    top: 5px;
+    bottom: 5px;
+    margin-right: 5px;
+
+    position: relative;
+}
+#search_count{
+    float: right;
+}
+#search_count *{
+    display: inline-block;
+}
+#search_count p:nth-child(2), #search_count p:last-child{
+    background-color: yellow;
+    font-weight: 500;
+    margin-left: 5px;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+#search_error_msg{
+    padding-top: 10px;
+    border-top: 1px solid gray;
+    text-align: center;
+}
+
+/**/
+
+
+section table{
+    clear: both;
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+section table tr{
+    height: 35px;
+    border-bottom: 1px solid lightgray;
+}
+section th{
+     background-color: rgba(20,20,20,0.12);
+}
+section tr:nth-child(1)~tr:hover{
+    background-color: lightgray;
+}
+
+section td:nth-child(3){
+    width: 40%;
+}
+section td a{
+    display: block;
+}
+/*
+paging 버튼 관련 style
+===
+paging_first
+paging_prev
+paging_num
+paging_next
+paging_last
+
+전체 class : paging;
+*/
+#paging_link{
+    width: 100%;
+    text-align: center;
+}
+.paging{
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid gray;
+    margin-right: 5px;
+    padding-top: 1px;
+}
+#paging_first, #paging_last{
+    width: 50px;
+}
+.paging:hover{
+    background-color: silver;
+}
+.now_page{
+    background-color: gray;
+    color: white;
+}
+.title_p{
+    display: inline-block;
+}
+#reply_cnt{
+    color: blue;
+}
+#btn_write{
+    position: relative;
+    float: right;
+    width: 80px;
+    bottom: 30px;
+    right: 5px;
+    border: 1px solid gray;
+    transition: all 0.2s;
+    background-color: white;
+}
+#btn_write:hover{
+    background-color: lightgray;
+}   
+.board_img_cut{
+
+    height: 70px;
+    overflow: hidden;
+    text-align: center 
+}
+.board_img{
+    height: 100%;
+    width: auto;
+    display: inline-block;
+}
+
+@media(max-width: 1300px)
+{
+    section{
+        margin-left: 5%;
+        width: 90%;
+    }
+}
+@media(max-width: 890px)
+{
+    section{
+        margin-left: 0;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    section th:nth-child(6), section td:nth-child(6){
+        display: none;
+    }
+}
+
+@media(max-width: 790px)
+{
+    section th:nth-child(2), section td:nth-child(2){
+        display: none;
+    }
+}
+
+@media(max-width: 690px)
+{
+    section th:last-child, section td:last-child{
+        display: none;
+    }
+    #search{
+        width: 170px;
+    }
+}
+@media(max-width: 630px)
+{
+    section th:nth-child(5), section td:nth-child(5){
+        display: none;
+    }
+}
+@media(max-width: 599px)
+{
+    section{
+        margin: 0;
+        padding: 0;
+        min-height: 0;
+        padding-bottom: 30px;
+    }
+    #list_title{
+        text-align: center;
+        height: 100px;
+        padding-top: 25px;
+        box-shadow: none;
+    }
+    #list_title #a_group{
+        display: none;
+    }
+ 
+    #search_bar{
+        height:  auto;
+        padding: 0;   
+        box-shadow: none;
+    }
+    #submit{
+        height: 38px;
+        width: 18%;
+        border-radius: 0;
+        margin: 0;
+        border: 1px solid lightgray;
+    }
+    #search_bar label p{
+        display: none;
+    }
+    #search{
+        height: 40px;
+        width: 80%;
+    }
+    #select_group{
+        display: block;
+        width: 100%;
+        clear: both;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    #select_group select{
+        margin: 0;
+        width: 49.5%;
+        height: 40px;
+        border: 1px solid lightgray;
+    }
+    #search_msg svg{
+        display: none;
+    }
+ 
+    #search_msg{
+        border-bottom: 1px solid lightgray;
+        width: 100%;
+        padding: 2px;
+        text-align: center;
+    }
+    #search_count{
+        display: block;
+        width: 100%;
+        clear: both;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}

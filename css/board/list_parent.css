@@ -1,0 +1,7 @@
+#list_title{
+    background-image: url('/img/board/teacher.png');
+    background-size: cover;
+}
+#list_title h1{
+    color: ghostwhite;
+}

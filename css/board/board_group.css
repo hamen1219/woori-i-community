@@ -1,0 +1,95 @@
+section{
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 50px;
+	margin-bottom: 50px !important;		
+}
+section h2{
+	text-align: center;
+	font-weight: 700;
+	padding: 20px;
+	width: 98%;
+	margin-left: 1%;
+}
+#board_group_title{
+	background-image: url('/img/board/1.PNG');
+	background-size: cover;	
+	box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+	height: 120px;
+	margin-bottom: 50px;
+	padding-top: 15px;
+}
+.group{
+	width: 100%;
+	height: auto;
+	display: block;
+	height: 400px;
+}
+.group>div{
+	width: 32%;
+	height: 400px;
+	margin-left: 1%;
+	display: inline-block;
+	text-align: center;
+	border: 1px solid skyblue;
+	border-top: 5px solid skyblue;
+	float: left;
+	background-color: skyblue;
+}
+
+.group>div div{
+	width: 100%;
+	height: 100%;
+	transition: all 0.2s;
+	display: inline-block;
+	background-color: white;
+}
+.group>div:hover div{
+	width: 80%;
+	background-color: rgba(255,255,255,0.5);
+}
+.group>div svg{
+	width: 50px;
+	height: 50px;
+	margin-bottom: 10px;
+	margin-top: 130px;
+}
+@media(max-width: 1450px){
+	section{
+		width: 100%;
+		margin-left: 0;
+	}	
+}
+@media(max-width:1100px){
+	.group>div{
+		margin: 0;
+		width: 33.33%;
+	}
+}
+@media(max-width:850px){
+	section{
+		margin: 0;
+	}
+	section h2{
+		margin-left: 0;
+		width: 100%;			
+	}
+	#board_group_title{
+		margin-bottom: 20px;
+	}
+
+	.group>div{
+		display: block;
+		width: 100%;
+		height: 200px;
+	}
+	.group>div svg{
+		margin: 0;
+		margin-top: 30px;
+		margin-bottom: 10px;
+	}		
+	.group>div{
+		border: 1px solid skyblue;
+		border-bottom: 0;
+	}
+}

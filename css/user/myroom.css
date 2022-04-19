@@ -1,0 +1,698 @@
+body * {
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    margin-top: 50px;
+    margin-left: 10%;
+    width: 80%;
+    border: 1px solid lightgray;
+    padding: 5px;
+    transition: all 1s;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+section>div,
+#s_center>div {
+    box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+}
+
+.s_title {
+    background-color: ghostwhite;
+    padding: 5px;
+}
+
+.s_title svg {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    bottom: 3px;
+    margin-right: 5px;
+}
+
+#s_center .s_title {
+    padding-left: 10px;
+    border-radius: 3px;
+    background-color: #5853a0;
+    color: white;
+}
+
+#s_center .s_title,
+#us1 table,
+#s_center button,
+#mysave {
+    position: relative;
+    bottom: 30px;
+}
+
+#msg_info {
+    width: 100%;
+    height: 60px;
+    border-bottom: 0;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#msg_cnt * {
+    display: inline-block;
+}
+
+#msg_cnt {
+    background-color: skyblue;
+    padding: 5px;
+    border-radius: 10px;
+    margin-right: 20px;
+    min-width: 110px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+}
+
+.msg_cnt {
+    background-color: white;
+    border-radius: 30px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: 10px;
+}
+
+.msg_cnt:last-child {
+    background-color: yellow;
+    margin-left: 10px;
+}
+
+#msg_info>div {
+    display: inline-block;
+    font-size: 20px;
+}
+
+#my_title {
+    position: relative;
+    width: 80%;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    bottom: 105px;
+    left: 110px;
+}
+
+#my_title h1 {
+    margin-bottom: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#my_title p {
+    margin-left: 20px;
+}
+
+#us_info * {
+    display: inline-block;
+}
+
+#us_info>div {
+    background-color: lightgreen;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 3px;
+    position: relative;
+    bottom: 8px;
+}
+
+#my_img_cut {
+    overflow: hidden;
+    width: 90px;
+    height: 90px;
+    border-radius: 100px;
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+    position: relative;
+    bottom: 70px;
+    box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+    text-align: center;
+}
+
+#s_top {
+    border: 1px solid lightgray;
+    margin-top: 40px;
+    height: 180px;
+    margin-bottom: 30px;
+}
+
+#s_top img {
+    width: auto;
+    height: 100%;
+}
+
+#admin_btn_group {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: none;
+}
+
+.admin_btn {
+    width: 48%;
+    margin: 1%;
+    display: inline-block;
+    height: 130px;
+    box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+    background-color: rgba(0, 0, 100, .70);
+    padding-top: 43px;
+    padding-left: 20px;
+    color: white;
+    transition: all 0.3s;
+    text-align: center;
+    float: left;
+}
+
+.admin_btn:hover {
+    background-color: rgb(51, 103, 214);
+    color: white;
+}
+
+.admin_btn h4 {
+    font-size: 30px;
+}
+
+.admin_btn svg {
+    position: relative;
+    bottom: 5px;
+}
+
+
+/*baby*/
+
+#baby_list {
+    width: 100%;
+    height: 280px;
+    border: 1px solid lightgray;
+    overflow-y: auto;
+}
+
+.baby_info_list {
+    height: 280px;
+    width: 280px;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    position: sticky;
+    left: 0;
+    text-align: center;
+    transition: all 0.2s;
+    float: left;
+}
+
+#baby_add_btn:hover {
+    background-color: lightgray;
+    cursor: pointer;
+    color: black;
+}
+
+#baby_add_btn svg {
+    height: 50px;
+    width: 50px;
+    color: gray;
+    display: inline-block;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+#baby_bottom {
+    clear: both;
+}
+
+.baby_img_cut {
+    height: 120px;
+    width: 120px;
+    overflow: hidden;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 5px;
+    margin-top: 20px;
+    box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+}
+
+.baby_img_cut img {
+    height: 100%;
+    width: auto;
+}
+
+.baby_info_list a {
+    border: 1px solid lightgray;
+    padding: 2px;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    background-color: rgba(20, 20, 20, 0.1);
+}
+
+.baby_info_list>a {
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.baby_info_list p:nth-child(4) {
+    margin: 5px;
+}
+
+.alert_msg_cnt {
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    bottom: 250px;
+    left: 180px;
+    background-color: #FFE400;
+    box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+    text-align: center;
+    font-weight: 600;
+    padding-top: 3px;
+}
+
+#baby_wrap {
+    box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+    border: 1px solid lightgray;
+}
+
+#baby_wrap .s_title {
+    background-color: rgba(30, 30, 130, 0.2);
+    margin: 5px;
+    padding-left: 10px;
+}
+
+
+/*contents*/
+
+#s_center {
+    margin-top: 50px;
+    background-color: rgba(20, 20, 20, 0.1);
+    padding: 10px;
+    padding-top: 15px;
+}
+
+#us1 {
+    height: 530px;
+    width: 42%;
+    border: 1px lightgray;
+    padding: 10px;
+    float: left;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    background-color: ghostwhite;
+}
+
+#us1_info {
+    height: 390px;
+    width: 90%;
+    margin-left: 2%;
+    margin-top: 20px;
+}
+
+#us1_info tr td:first-child {
+    width: 80px;
+}
+
+#us1>button {
+    width: 100%;
+    height: 70px;
+    border: 0;
+    position: relative;
+    margin-top: 15px;
+    transition: all 0.3s;
+    background-color: rgba(20, 20, 20, 0.2);
+}
+
+#us1>button p {
+    font-size: 25px;
+}
+
+#us1>button:hover {
+    background-color: rgba(20, 20, 20, 0.4);
+}
+
+#us2 {
+    height: 530px;
+    width: 54%;
+    border: 1px solid lightgray;
+    background-color: ghostwhite;
+    padding: 10px;
+    float: right;
+    margin-left: 0.8%;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+#mysave {
+    width: 100%;
+    height: 470px;
+    background-color: rgba(255, 255, 255, 0.8);
+    overflow-y: auto;
+    margin-top: 20px;
+    border: 1px solid gray;
+    box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+}
+
+#mysave table {
+    width: 100%;
+    text-align: center;
+}
+
+#mysave table th {
+    display: sticky;
+    top: 0;
+    background-color: lightblue;
+    height: 30px;
+}
+
+#mysave table th:first-child {
+    width: 110px;
+}
+
+#mysave table tr:first-child~tr {
+    height: 40px;
+    border-bottom: 1px solid lightgray;
+}
+
+#mysave table tr:first-child~tr:hover {
+    background-color: rgba(20, 20, 20, 0.1);
+}
+
+#mysave table td a {
+    display: block;
+}
+
+#us3 {
+    height: auto;
+    width: 100%;
+    background-color: lightgray;
+    padding: 5px;
+    clear: both;
+    margin-bottom: 10px;
+}
+
+#graph_group {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: rgba(20, 20, 20, 0.1);
+    padding: 5px;
+    padding-top: 10px;
+    clear: both;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+#graph_group h4 {
+    text-align: left;
+}
+
+#graph_group>div {
+    display: inline-block;
+}
+
+.graph_wrap {
+    display: inline-block;
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid lightgray;
+}
+
+.graph_wrap:hover {
+    cursor: pointer;
+}
+
+.graph {
+    border-radius: 100px;
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.graph_per {
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    border-radius: 100px;
+    padding-top: 30px;
+    position: absolute;
+    top: 17px;
+    background: lightblue;
+    transition: all 0.2s;
+}
+
+.graph_per>h3 {
+    transition: all 0.2s;
+}
+
+.graph_per:hover {
+    background-color: skyblue;
+}
+
+.graph_per:hover>h3 {
+    font-size: 32px;
+}
+
+.graph_inner {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: orange;
+    float: left;
+    /* margin-right: -27px; */
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.graph_wrap p {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.graph_wrap>p {
+    display: inline-block;
+    font-size: 17px;
+}
+
+.good {
+    background-color: rgb(51, 103, 214);
+}
+
+.poor {
+    background-color: red;
+}
+
+.save {
+    background-color: lightgreen;
+}
+
+#btn_my_board {
+    width: 100%;
+    display: block;
+    height: 60px;
+    clear: both;
+    margin-top: 30px;
+    box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+    background-color: rgba(51, 103, 214, 0.8);
+    padding-top: 15px;
+    padding-left: 20px;
+    color: white;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+#btn_my_board:hover {
+    background-color: rgb(51, 103, 214);
+}
+
+#btn_my_board svg {
+    width: 30px;
+    height: 30px;
+}
+
+.bottom {
+    clear: both;
+}
+
+.s_base {
+    width: 100%;
+    height: 150px;
+    padding: 5px;
+    box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+    padding-bottom: 30px;
+}
+
+#delete_user {
+    width: 80%;
+    margin-left: 10%;
+    height: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 1px solid lightgray;
+    font-size: 35px;
+    background-color: brown;
+    box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
+    transition: all 0.2s;
+    color: white;
+}
+
+#delete_user:hover {
+    background-color: gray;
+}
+
+#file {
+    height: 45px;
+}
+
+@media(max-width: 1800px) {
+    section {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+@media(max-width: 1600px) {
+    section {
+        width: 94%;
+        margin-left: 3%;
+    }
+}
+
+@media(max-width: 1400px) {
+    section {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media(max-width: 1300px) {
+    #s_center {
+        width: 80%;
+        margin-left: 10%;
+    }
+    #s_center>div {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #us1,
+    #us2 {
+        display: block;
+        width: 100%;
+        float: left;
+        margin: 0;
+    }
+    #graph_group>div {
+        width: 100%;
+        display: block;
+        border-bottom: 2px solid white;
+        transition: all 0.3s;
+    }
+    #graph_group>div:last-child {
+        border: 0;
+    }
+    #graph_group>div:hover {
+        background-color: rgba(20, 20, 20, 0.1);
+        cursor: pointer;
+    }
+    .graph_wrap {
+        border: 0;
+    }
+}
+
+@media(max-width: 900px) {
+    section {
+        padding: 0;
+        margin-bottom: 30px;
+        border: 0;
+        margin-top: 0;
+    }
+    #s_center {
+        width: 100%;
+        margin-left: 0;
+        padding: 0;
+    }
+    #s_center>div {
+        box-shadow: none;
+        margin-bottom: 20px;
+    }
+    #s_top {
+        margin-top: 70px;
+        height: 210px;
+    }
+    #us1,
+    #us2 {
+        display: block;
+        width: 100%;
+        float: left;
+        margin: 0;
+        margin-bottom: 50px !important;
+    }
+    #us_info>div {
+        height: 30px;
+        bottom: 0;
+        padding-bottom: 30px;
+    }
+    #my_img_cut {
+        margin-top: 20px;
+    }
+    #my_title {
+        text-align: center;
+        left: 0;
+        width: 100%;
+        height:
+    }
+    #my_title h1 {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        margin-top: 40px;
+    }
+    .admin_btn {
+        width: 100%;
+        display: block;
+        height: 70px;
+        padding-top: 17px;
+    }
+    #delete {
+        margin: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+    section h4 {
+        text-align: center !important;
+    }
+    #baby_list {
+        margin-left: 5%;
+        width: 90% !important;
+        margin-bottom: 20px;
+    }
+    .baby_info_list {
+        width: 100% !important;
+    }
+    #us2 tr th:last-child,
+    #us2 tr td:last-child {
+        display: none;
+    }
+    #delete_user {
+        height: 100px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .admin_btn svg {
+        display: none;
+    }
+    .admin_btn h4 {
+        font-size: 25px;
+    }
+}
