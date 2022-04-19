@@ -32,3 +32,7 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 
 database.php
 .htaccess
+/application/backup/*
+/application/backup_fin/*
+/.vscode
+/readme.rst
