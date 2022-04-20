@@ -124,7 +124,7 @@ class AjAX extends CI_Controller {
 
 			//사용자 정보 쿼리 배열화
 			$form = $this->comp->user($form);
-			$rs = $this->user->joinUser($form);
+			$rs   = $this->user->joinUser($form);
 
 			if(!$rs)
 			{
@@ -489,17 +489,13 @@ class AjAX extends CI_Controller {
 		$this->ajaxPerm();	
 		$this->checkForm();
 
-		$id = $this->sess->get_id();   
+		$id = $this->sess->get_id(); 
+		
+		// form data 
 		$form = $this->input->post();
- 
-    	$query = [
-    		'from'   => 'user',
-    		'where'  => [
-        		'id' => $id,
-        		'pw' => $form['pw']
-        	]
-    	];
-    	$rs = $this->user->checkPerm($query);
+
+		// 사용자 확인 쿼리 추가
+    	$rs = $this->user->checkPerm($form['id'], $form['pw']);
 
     	if($rs)
     	{
