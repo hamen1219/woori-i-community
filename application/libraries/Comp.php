@@ -24,7 +24,7 @@ class Comp
 			}
 			if(array_key_exists("tpw", $form))
 			{
-				$arr['pw'] = $form['tpw'];
+				$arr['pw'] = password_hash($form['tpw'], PASSWORD_DEFAULT);
 			}
 			if(array_key_exists("tname", $form))
 			{

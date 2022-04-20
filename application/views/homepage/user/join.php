@@ -66,16 +66,29 @@
 				<p>프로필</p>
 				<input type="file"  name="img_file" id = "file">
 			</div>
+
+			<div class = "input">
+				<p>본인인증</p>
+				<input type="button" id="cert_btn" onclick="javascript:getImpUid();" class="btn btn-info" style="height:40px;" value="인증하기"/>
+			</div>
+
 			<div id = "input_bottom"></div>
 		</div>		
 
 		<!--가입 버튼 그룹-->
 		<div id = btn_group>
-			<button id = "submit" value = "회원가입"><p>가입</p></button>
+			<button id = "submit"><p>가입</p></button>
 			<button onclick="location.href='/main'"><p>홈으로</p></button>
 		</div>		
+
+		<!-- IMP uid -->
+		<input type="hidden" name="imp_uid">
 	</form>
 </section>
+
+
+<!-- 아이엠포트 -->
+<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.8.js"></script>
 
 <!--외부 스크립트 불러오기-->
 <script src = "/js/user/join.js"></script>

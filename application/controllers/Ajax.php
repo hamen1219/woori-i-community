@@ -123,9 +123,25 @@ class AjAX extends CI_Controller {
 				$form['img'] = $do_upload; 				
 			}	
 
+			if(empty($form['imp_uid'])) {
+				die(json_encode(['code'=>0, 'msg'=>'인증정보가 확인되지 않음.']));
+			}
+			$imp_uid = $form['imp_uid'];
+
 			//사용자 정보 쿼리 배열화
 			$form = $this->comp->user($form);
-			$rs   = $this->user->joinUser($form); 
+
+			// 인증 정보 가져오기
+			$cert_res = $this->getCert($imp_uid);
+
+			if(!$cert_res['code']) { // 인증정보 가져오기 실패시 
+				die(json_encode($cert_res));
+			}
+
+			// 성공시 인증정보와 form 데이터 합치기
+			$form = array_merge($form, $cert_res['result']);
+
+			$rs = $this->user->joinUser($form); 
 
 			if(!$rs) { // 가입 실패 
 				$data["msg"] = "회원가입에 실패하였습니다";
@@ -155,6 +171,68 @@ class AjAX extends CI_Controller {
 			}			
 		}
 		print json_encode($data);
+	}
+
+	public function getCert($imp)
+	{
+		/**
+		 * 1. 액세스 토큰 발급받기 
+		 */
+		$ch = curl_init();
+		curl_setopt_array($ch, [
+			CURLOPT_URL => "https://api.iamport.kr/users/getToken",
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_POST => true,
+			CURLOPT_POSTFIELDS => json_encode([
+				'imp_key' => '3463411881342574',
+				'imp_secret' => '202fa16aa50aafad4703b4f32df1b606bc3a861553278a025d8ae8ead56fe4159cb60540e37b2117'
+			]),
+			CURLOPT_HTTPHEADER => ["Content-Type: application/json"]			
+		]);
+
+		$res = curl_exec($ch);
+		curl_close($ch);
+
+		$res_data = json_decode($res) ;
+
+		// 토큰 정보 없는 경우 
+		if(empty($res_data->response->access_token)) {
+			return ['code'=>0, 'msg'=>'토큰 가져오기 실패'];
+		}
+	
+		// 성공시 access token 
+		$token = $res_data->response->access_token;
+
+		/**
+		 * imp, token 값으로 사용자 확인 및 데이터 가져오기 
+		 */
+		
+		$ch = curl_init();
+		curl_setopt_array($ch, [
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_URL => "https://api.iamport.kr/certifications/{$imp}",
+			CURLOPT_HTTPHEADER => ["Authorization: {$token}"]			
+		]);
+		
+		$res = curl_exec($ch);
+		curl_close($ch);
+		
+		$res_data = json_decode($res);
+
+		if(empty($res_data->response)) {
+			return ['code'=>0, 'msg'=>'사용자 정보 가져오기 실패'];
+		}
+
+		// personal info
+		$cert_info = $res_data->response;
+		
+		$add_info = [
+			'phone' => $cert_info->phone,
+			'real_name' => $cert_info->name,
+			'birth' => $cert_info->birthday
+		];
+
+		return ['code'=>1, 'msg'=>'ok', 'result'=>$add_info];
 	}
 
 	/**

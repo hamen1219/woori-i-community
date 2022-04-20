@@ -1,5 +1,14 @@
 $(document).ready(function(){
+
 		$('#submit').click(function(){
+	
+			let imp_uid = $('input[name=imp_uid]').val();
+
+			if(!imp_uid) {
+				alert("본인인증을 진행해주세요");
+				return false ;
+			}
+			
 			if($('#tid').val().length < 8 || $('#tid').val().length > 15){
 				alert("아이디를 다시 입력하세요") ;		
 			}
@@ -18,7 +27,9 @@ $(document).ready(function(){
 			else if($('#tpw').val() !== $('#rpw').val()){
 				alert("패스워드가 일치하지 않습니다") ;			
 			}
-			else{get_ajax_join();}
+			else{
+				get_ajax_join();
+			}
 			return false;
 		});
 		
@@ -134,6 +145,37 @@ $(document).ready(function(){
 	});
 
 
+function getImpUid()
+{
+	let IMP = window.IMP ;
+	IMP.init("imp52353347");
+
+	IMP.certification({ // param
+		merchant_uid: "ORD20180131-0000011", // 주문 번호
+
+	}, function (rsp) { // callback
+
+		console.log(rsp);
+
+		if (rsp.success) { // 인증 성공
+			
+			let imp_uid = rsp.imp_uid;
+			$('#cert_btn').val('인증완료').removeClass('btn-info').addClass('btn-success').removeAttr('onclick');
+
+			if(!imp_uid) {
+				alert("인증값 불러오기 실패"); 
+				return false ;
+			}
+
+			$('input[name=imp_uid]').val(imp_uid);
+
+		} else { // 인증 실패!
+		
+			alert("인증 실패!");
+		}
+	});
+}
+
 
 function get_ajax(){ 
 	//실시간으로 회원 아이디 정보 확인하여 화면에 뿌려주기.
@@ -163,6 +205,8 @@ function get_ajax(){
 		}
 	});
 }	
+
+
 
 function get_ajax_join()
 {
