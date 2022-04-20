@@ -140,6 +140,7 @@
 			<!--게시물 버튼 그룹-->	
 			<div id = "btn_group">
 				<button class="btn btn-primary" type = "submit">등록</button>
+				
 				<button class="btn btn-secondary" onclick="history.back()">뒤로</button>
 			</div>			
 		</div>			
@@ -149,6 +150,7 @@
 	<div id = "right">
 		<!--시계-->
 		<div id = "clock">			
+			<div class="clock_inner"></div>
 		</div>
 		<!--최근 게시물-->
 		<div id = "latest">
@@ -195,7 +197,7 @@
 
 <!--외부 스크립트 불러오기-->	
 <script src="/static/lib/ckeditor/ckeditor.js"></script>
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f8f356e5f51fd9166b0fc4b453f121b8&libraries=services"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a5b25014628de860e329f4da35b7370e&libraries=services"></script>
 
 <script src = "/js/board/crud/clock.js"></script>
 <script src = "/js/board/crud/write.js"></script>

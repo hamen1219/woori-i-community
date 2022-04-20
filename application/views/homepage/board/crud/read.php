@@ -35,7 +35,7 @@
 						&nbsp; / 최종수정일 : <?=$board['updated']?>
 					<?php endif; ?>
 
-					<?php if($user == $board['user']): ?>
+					<?php if($user == $board['user'] || $_SESSION['user']['perm'] == "관리자" ): ?>
 						<div id = "board_ctrl_group">
 							<button id = "btn_board_update" onclick="ctrl_board(<?=$board['num']?>, 'update')">게시물 수정</button>
 							<button id = "btn_board_delete" onclick="ctrl_board(<?=$board['num']?>, 'delete')">게시물 삭제</button>
