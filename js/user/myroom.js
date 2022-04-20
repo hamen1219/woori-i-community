@@ -48,22 +48,22 @@ function update_form(mode)
 		//사용자 ID, PW 받아오기
 		id = $('input[name=tid]').val();
 
-		//회원 수정시 관리자, 부관리자는 pw 입력 x
-		if(mode != "admin")
-		{
-			pw = prompt("비밀번호를 입력하세요");
-			if(pw.length < 4)
-			{
-				alert("비밀번호 길이가 짧습니다");
-				return;
-			}
-			//사용자 정보 확인되면
-			if(!check_perm(id, pw))
-			{
-				alert("비밀번호가 일치하지 않습니다");
-				return;
-			}
-		}
+		// //회원 수정시 관리자, 부관리자는 pw 입력 x
+		// if(mode != "admin")
+		// {
+		// 	pw = prompt("비밀번호를 입력하세요");
+		// 	if(pw.length < 4)
+		// 	{
+		// 		alert("비밀번호 길이가 짧습니다");
+		// 		return;
+		// 	}
+		// 	//사용자 정보 확인되면
+		// 	if(!check_perm(id, pw))
+		// 	{
+		// 		alert("비밀번호가 일치하지 않습니다");
+		// 		return;
+		// 	}
+		// }
 				
 		//data : 최초 사용자 정보 저장될 공간.
 		//input으로 바꾸어 준 후 data에 보관해 둔 이전 데이터 넣어주기.
@@ -112,29 +112,29 @@ $(document).on("click","#addr_api",function(){
 });
 
 //confirm 창에 비밀번호 입력 시 유저 id, pw 검증에 사용되는 ajax 함수
-function check_perm(id, pw)
-{		
-	var code;
-	$.ajax({
-		type : 'post',
-		dataType : 'json',
-		url : '/ajax/check_perm',			 
-		data : {
-			id : id,
-			pw : pw
-		},
-		async : false,
-		success : function(result){
-			//비번 일치시
-			code = result['code'];				
-		},
-		error:function(request,status,error){
-			alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
-			//return 0;
-		}
-	});
-	return code;
-}
+// function check_perm(id, pw)
+// {		
+// 	var code;
+// 	$.ajax({
+// 		type : 'post',
+// 		dataType : 'json',
+// 		url : '/ajax/check_perm',			 
+// 		data : {
+// 			id : id,
+// 			pw : pw
+// 		},
+// 		async : false,
+// 		success : function(result){
+// 			//비번 일치시
+// 			code = result['code'];				
+// 		},
+// 		error:function(request,status,error){
+// 			alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+// 			//return 0;
+// 		}
+// 	});
+// 	return code;
+// }
 
 //유저 정보 수정 시
 function update_user()
@@ -187,31 +187,31 @@ function delete_user(mode)
 	id = $('#user_id').val();
 
 	//회원 수정시 관리자, 부관리자는 pw 입력 x
-	if(mode != "admin")
-	{
-		pw = prompt("비밀번호를 입력하세요");
-		if(pw.length < 4)
-		{
-			alert("비밀번호 길이가 짧습니다");
-			return;
-		}
-		//사용자 정보 확인되면
-		if(!check_perm(id, pw))
-		{
-			alert("비밀번호가 일치하지 않습니다");
-			return;
-		}
-	}
+	// if(mode != "admin")
+	// {
+	// 	pw = prompt("비밀번호를 입력하세요");
+	// 	if(pw.length < 4)
+	// 	{
+	// 		alert("비밀번호 길이가 짧습니다");
+	// 		return;
+	// 	}
+	// 	//사용자 정보 확인되면
+	// 	if(!check_perm(id, pw))
+	// 	{
+	// 		alert("비밀번호가 일치하지 않습니다");
+	// 		return;
+	// 	}
+	// }
 
       id = $('#user_id').val() ;
-	pw = prompt('비밀번호를 입력하세요');
-	if(pw === null)
-	{
-		return;
-	}
+	// pw = prompt('비밀번호를 입력하세요');
+	// if(pw === null)
+	// {
+	// 	return;
+	// }
 
-	if(check_perm(id, pw))
-	{
+	// if(check_perm(id, pw))
+	// {
 		$.ajax({
 			url : '/ajax/delete_user',
 			type : 'post',
@@ -235,7 +235,7 @@ function delete_user(mode)
 				document.write("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
 			}
 		});
-	}
+	// }
 }
 
 function addrClick()

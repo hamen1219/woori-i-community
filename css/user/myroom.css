@@ -20,7 +20,8 @@ section>div,
 }
 
 .s_title {
-    background-color: ghostwhite;
+    /* background-color: ghostwhite; */
+    border-bottom: 1px solid lightgray;
     padding: 5px;
 }
 
@@ -157,10 +158,10 @@ section>div,
     width: 48%;
     margin: 1%;
     display: inline-block;
-    height: 130px;
+    height: 90px;
     box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
     background-color: rgba(0, 0, 100, .70);
-    padding-top: 43px;
+    padding-top: 27px;
     padding-left: 20px;
     color: white;
     transition: all 0.3s;
@@ -278,7 +279,7 @@ section>div,
 }
 
 #baby_wrap .s_title {
-    background-color: rgba(30, 30, 130, 0.2);
+    /* background-color: rgba(30, 30, 130, 0.2); */
     margin: 5px;
     padding-left: 10px;
 }
@@ -397,9 +398,9 @@ section>div,
     width: 100%;
     height: auto;
     text-align: center;
-    background-color: rgba(20, 20, 20, 0.1);
-    padding: 5px;
-    padding-top: 10px;
+    /* background-color: rgba(20, 20, 20, 0.1); */
+    /* padding: 5px; */
+    padding: 10px;
     clear: both;
     margin-bottom: 30px;
     margin-top: 30px;
@@ -420,7 +421,7 @@ section>div,
     height: auto;
     padding: 10px;
     text-align: center;
-    border: 1px solid lightgray;
+    /* border: 1px solid lightgray; */
 }
 
 .graph_wrap:hover {
