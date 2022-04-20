@@ -1,6 +1,46 @@
-<link rel="stylesheet" type="text/css" href="/css/about/hp/intro.css">
+<style>
+	#title{
+		border-bottom: 3px solid gray;
+		padding-bottom: 15px;
+	}
+	section{
+		width: 80%;
+		margin-left: 10%;
+		padding: 20px;
+		padding-bottom: 60px;
+	}	
+	#contents{
+		margin-top: 50px;
+		height: 500px;
+		padding-top: 0px;
+		text-align: center;
+	}
 
+	#contents h2{
+		margin-bottom: 40px;
+	}
 
+	.left, .right{
+		float: left;
+	}
+	.bottom{
+		width: 70%;
+		clear: both;
+	}
+	.left{
+		text-align: center;
+		width: 40%;
+	}
+	.left img{
+		width: 230px;
+		margin-top: 25px;
+		display: inline-block;
+	}
+	#img_wrap{
+		width: 100%;
+		margin-bottom: 30px;
+	}
+</style>
 <section>
 	<div id = "title">
 		<h2>홈페이지 소개</h2>
@@ -11,8 +51,6 @@
 		<div id = "img_wrap">
 			<img src="/img/header/ci1.png">
 		</div>
-
-		<hr><br>
 
 		<h2 id = "word_title"><b>"우리아이 커뮤니티입니다"</b></h2>		
 

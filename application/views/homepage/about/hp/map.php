@@ -1,4 +1,43 @@
-<link rel="stylesheet" type="text/css" href="/css/about/hp/map.css">
+
+<style>
+	#title{
+		border-bottom: 3px solid gray;
+		padding-bottom: 15px;
+	}
+	section{
+		width: 80%;
+		margin-left: 10%;
+		padding: 20px;
+		padding-bottom: 60px;
+	}	
+	#contents{
+		margin-top: 30px;
+		height: 500px;
+		padding-top: 20px;
+	}
+
+	#contents h2{
+		margin-bottom: 20px;
+	}
+
+	.left, .right{
+		float: left;
+	}
+	.bottom{
+		width: 70%;
+		clear: both;
+	}
+	.left{
+		text-align: center;
+		width: 40%;
+	}
+	.left img{
+		width: 230px;
+		margin-top: 25px;
+		display: inline-block;
+	}
+</style><link rel="stylesheet" type="text/css" href="/css/about/hp/map.css">
+
 
 <section>
 	<div id = "title">
@@ -18,10 +57,6 @@
 			<div id="map" style="width:100%;height:350px;"></div>
 		</div>
 
-		
-
-		
-		
 	</div>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a5b25014628de860e329f4da35b7370e&libraries=services"></script>
@@ -54,7 +89,7 @@ geocoder.addressSearch('도봉동 30-1', function(result, status) {
         var arr_str  = "37.68668380372864, 127.04759376340415";
         // 인포윈도우로 장소에 대한 설명을 표시합니다
         var infowindow = new kakao.maps.InfoWindow({
-            content: '<div style="width:150px;text-align:center;padding:6px 0;"><a href= "http://map.daum.net/link/to/본사,'+arr_str+'">본사 길찾기</a></div>'
+            content: '<div style="width:150px;text-align:center;padding:6px 0;"><a target="_blank" href= "http://map.daum.net/link/to/본사,'+arr_str+'">본사 길찾기</a></div>'
         });
         infowindow.open(map, marker);
 
