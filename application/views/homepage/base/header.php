@@ -75,9 +75,9 @@
 
 			<!--모달 버튼 그룹-->	
 			<div id = "btn_group_modal" class="btn-group btn-group-sm" role="group" aria-label="...">
-				<a class = "btn btn-secondary" href="/user/myroom/<?=$user['id']?>">마이룸</a>
-				<a class = "btn btn-secondary" href="/user/logout/1">로그아웃</a> 
-				<a class = "btn btn-secondary" href="/board/write">글쓰기</a>
+				<a class = "btn btn-info" href="/user/myroom/<?=$user['id']?>">마이룸</a>
+				<a class = "btn btn-info" href="/board/write">글쓰기</a>
+				<a class = "btn btn-secondary" href="/user/logout/1">로그아웃</a> 			
 			</div>	
 		</div>
 
