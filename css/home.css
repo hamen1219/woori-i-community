@@ -79,19 +79,19 @@ section hr{
 	min-height: 130px;
 	width: 100%;
 	margin-bottom: 70px;
-	border: 1px solid gray;
-	box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
-	transition: all 0.2s; 
-	padding: 5px;
+	border-radius: 10px;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+	0 1px 5px 0 rgba(0, 0, 0, 0.12),
+	0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	transition: all 0.2s;
+	background-color: rgba(232, 240, 254, 0.4); 
+	padding: 10px;
+
 }
-#notice h4{
-	background-color: #66c971;
-	padding: 4px;
-	padding-left: 10px;
-	margin-bottom: 20px;
-}
+
 #notice h5{
 	margin-left: 10px;
+	font-weight: 700;
 }
 
 #notice p{
@@ -458,18 +458,24 @@ section hr{
 	clear: both;
 	height: auto;
 	width: 100%;				
-	padding: 10px;
+	padding: 15px;
 	padding-bottom: 40px;
 	margin-bottom: 160px;
-	background-color: #444;
+	border-radius: 10px;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+	0 1px 5px 0 rgba(0, 0, 0, 0.12),
+	0 3px 1px -2px rgba(0, 0, 0, 0.2);
+
+	background-color: rgba(131, 108, 108, 0.7);
+	/* background-color: #444; */
 	/* background-color: #666; */
 }
 	
 #board_gallary h3{
-	color: white;
+	color: black
 }
 #board_gallary hr{
-	background-color: lightgray;
+	background-color: white;
 }
 
 
@@ -486,7 +492,7 @@ section hr{
 	margin: 5px;
 	text-align: center;
 	background-color: black;
-	box-shadow: 0 8px 38px rgba(255,255,255,0.3), 0 5px 12px rgba(255,255,255,0.3);
+	/* box-shadow: 0 8px 38px rgba(255,255,255,0.3), 0 5px 12px rgba(255,255,255,0.3); */
 
 }
 
