@@ -518,7 +518,7 @@
   
 </style>
 <!--메인페이지 슬라이드-->
-
+<!-- 
 <div id = "main_slide">	
 	<div>	
 		<img id = "slide_img1" src="/img/3.png">
@@ -546,7 +546,7 @@
 </div>
 
 
-
+ -->
 
 <div id = "aa">
 	<div>1</div>

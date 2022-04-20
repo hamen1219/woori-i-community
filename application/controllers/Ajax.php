@@ -139,9 +139,9 @@ class AjAX extends CI_Controller {
 				$contents .= "<h2>".$id."님의 커뮤니티 가입을 축하드립니다 :)</h2><hr/>";
 				$contents .= "<p>이제부터 회원들과 다양한 소통을 하실 수 있습니다.</p>";
 				$contents .= "<p>자유로운 소통, 정모, 자기소개 등 다양한 커뮤니티에 참여해주시길 바랍니다</p>";
-				$contents .= "<p>또한 이데아커뮤니티의 다양한 소식을 받아보실 수 있습니다.</p><br/>";
+				$contents .= "<p>또한 우리아이 커뮤니티의 다양한 소식을 받아보실 수 있습니다.</p><br/>";
 				$contents .= "<p><b>다시 한번 ".$id."님의 회원가입을 축하드립니다.</b></p><br/><hr/>";
-				$contents .= "<p>- 이데아커뮤니티 대표 안형모</p>";
+				$contents .= "<p>- 우리아이 커뮤니티 대표 안형모</p>";
 
 				// send email
 				$this->mail->sendEmail($form['email'], $title, $contents);
