@@ -149,15 +149,9 @@ class AjAX extends CI_Controller {
 
 			} else { // 가입 성공 
 
-				// 가입성공 이메일 발송 문구
-				$title = $id."님 가입을 축하드립니다";
-				$contents =  "<img src = 'http://hung1219.cafe24.com/img/email/1.PNG'>";
-				$contents .= "<h2>".$id."님의 커뮤니티 가입을 축하드립니다 :)</h2><hr/>";
-				$contents .= "<p>이제부터 회원들과 다양한 소통을 하실 수 있습니다.</p>";
-				$contents .= "<p>자유로운 소통, 정모, 자기소개 등 다양한 커뮤니티에 참여해주시길 바랍니다</p>";
-				$contents .= "<p>또한 우리아이 커뮤니티의 다양한 소식을 받아보실 수 있습니다.</p><br/>";
-				$contents .= "<p><b>다시 한번 ".$id."님의 회원가입을 축하드립니다.</b></p><br/><hr/>";
-				$contents .= "<p>- 우리아이 커뮤니티 대표 안형모</p>";
+				// // 가입성공 이메일 발송 문구
+				$title = "{$form['name']}님, 우리아이 커뮤니티 회원가입을 축하드립니다";
+				$contents = $this->get_email_html($form['name']);
 
 				// send email
 				$this->mail->sendEmail($form['email'], $title, $contents);
@@ -233,6 +227,28 @@ class AjAX extends CI_Controller {
 		];
 
 		return ['code'=>1, 'msg'=>'ok', 'result'=>$add_info];
+	}
+
+	/**
+	 * 이메일 html 반환 
+	 */
+	public function get_email_html($user_name)
+	{
+		$html = "<div style='width: 900px; border: 1px solid lightgray; margin: 15px; padding: 15px;'>
+			<img style='width: 100%;' src='https://hung1219.cafe24.com/img/0.png' alt=''>
+			<h2>{$user_name}님, 우리아이 커뮤니티 가입을 진심으로 환영합니다.</h2>
+			<hr>
+			<div class='content' style='margin-top :20px; padding: 5px;'>
+				<p>우리아이 커뮤니티 가입을 진심으로 환영합니다.</p>
+				<p>더욱 쉽고 편리해진 교사 - 학부모 간 커뮤니케이션!</p>
+				<p>이제, 다양한 기능을 우리아이 커뮤니티를 통해 누려보실 수 있습니다</p><br>
+				<p>{$user_name}님. 귀하의 커뮤니티 가입을 진심으로 환영합니다!</p>
+				<p>감사합니다.</p><br/>
+				<p>- 우리아이 커뮤니티 대표 안형모</p>
+			</div>
+		</div>";
+
+		return $html;
 	}
 
 	/**
