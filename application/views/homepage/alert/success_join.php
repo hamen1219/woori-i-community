@@ -7,6 +7,20 @@
 	<script>
 		var user = "";
 	</script>
+
+	<?php 
+		$user = [
+			'id' => 'ㅁㄷㅎㅁㄷㅎ',
+			'name' => 'ㄷㅁㅎㄷㅁㅎ',
+			'sex' => 'ㅁㅎㄷㄷㅁㅎ',
+			'dept' => 'ㄷㄷㄷ', 
+			'email' => 'ㄷㄷㄷ', 
+			'addr' => 'ㅁㄷㅎㅁㄷ',
+			'perm' => 'ㅁㄷㅎㅁㄷㅎㄷㅁ',
+			'img'=>'ㄷㄷㄷ'
+		];
+	?>
+
 	<!--가입 후 가입성공 페이지를 중복 진입한 경우 만료 페이지 (flashdata 사용으로 1회만 보여주고 만료됨)-->
 	<?php if(!isset($user['id'])): ?>
 		<div id = "join_title" class = "join_error">				
@@ -23,18 +37,18 @@
 			user = "<?=$user['name']?>";
 		</script>
 		<div id ="join_title">
-			<img id = "apeach" src="/img/join/1.gif" onerror="this.src = '/img/error/no_img.png'">
+			<!-- <img id = "apeach" src="/img/join/1.gif" onerror="this.src = '/img/error/no_img.png'"> -->
 
 			<div id = "join_title">		
-					<h3><?=$user['id']?>님!! 가입을 축하합니다 :)</h3>
-					<p>Congratuation</p>	
+				<h3><?=$user['id']?>님!! 가입을 축하합니다 :)</h3>
+				<p>Congratuation</p>	
 			</div>
 		</div><hr>
 
 	<!--사용자 정보 데이터-->
 	<h5><b>사용자 정보</b></h5>
 	<div id = "join_user_info">
-		<div>
+		<div class="join_user_center">
 			<div id = "join_user_img_div">
 				<img id ="join_user_img" src="/img/users/<?=$user['id']?>/profile/<?=$user['img']?>" onerror = "this.src='/img/error/no_img.png'">
 			</div>

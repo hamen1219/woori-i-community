@@ -1,164 +1,194 @@
-section{
-	width: 60%;
-	margin-left: 20%;
-	margin-bottom: 50px;
-	transition: all 1s;
+section {
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 50px;
+    transition: all 1s;
 }
 
-#apeach{
-	width: 100px;
-	float: left;
-
-}
-#join_title{
-	padding-top: 30px;
-	flex: left
-	height: auto;
-	margin-top: 10px;
-	margin-bottom: 20px;
-}
-section hr{
-	margin-bottom: 20px;
-}
-section h5{
-	margin-bottom: 10px;
-	padding: 10px;
-	background-color: lightgray;
-	text-align: center;
-}
-section table{
-	margin-top: 10px;
-	text-align: left;
-	display: inline-block;
-	background-color: rgba(255,255,255,0.5);
-}
-section td{
-	height: 40px;
-	border-bottom: 5px solid rgba(20,20,20,0.1);
-	padding-left: 5px;
-}
-section tr td:last-child{
-	width: 70%;
+#apeach {
+    width: 100px;
+    float: left;
 }
 
-#join_user_info{
-	text-align: center;
-	padding: 10px;
-	background-color: rgba(20,20,20,0.1);
-	padding-top: 30px;
-	padding-bottom: 30px;
+#join_title {
+    padding-top: 30px;
+    flex: left height: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
-
-#join_user_img_div{
-	text-align: center;
-	width: 100%;
-}
-#join_user_img{
-	width: 150px;
-	height: auto;
-	display: inline-block;
-	border-radius: 10px;
-	margin-bottom: 10px;
+#join_title p {
+    margin-left: 10px;
+    margin-top: 5px;
 }
 
-#btn_group{
-	width: 40%;
-	height: auto;
-	margin: auto;
-	margin-top: 30px;
-	padding-bottom: 30px;
+section hr {
+    margin-bottom: 20px;
 }
 
-#btn_home, #btn_login{
-	height: 70px;
-	width: 49%;
-	border: 1px solid gray;
-	border-radius: 0;
-	transition: all 0.2s;	
+section h5 {
+    padding: 10px;
+    background-color: #4063bd;
+    color: white;
+    text-align: center;
 }
 
-#btn_group button:first-child{
-	background-color: #0062cc;
-	color: white;
-}
-#btn_group button:last-child{
-	background-color: white;
-	color: black;
-}
-#btn_group button:first-child:hover{
-	background-color: rgb(18,69,171);
-}
-#btn_group button:last-child:hover{
-	background-color: rgb(180,180,180);
-}
-#btn_error{
-	width: 100%;
-	height: 70px;
-	border: 1px solid gray;
-	border-radius: 0;
-	transition: all 0.2s;
+section table {
+    margin-top: 10px;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
-#btn_error p{
-	font-size: 20px;
+section table tbody {
+    width: 100% !important;
 }
 
-.join_error{
-	padding-bottom: 30px;
-	text-align: center;
-}
-.join_error h3{
-	border-bottom: 7px solid red;
-	padding-bottom: 5px;
-	margin-top: 70px;
-	margin-bottom: 5px;
-	width: 40%;
-	margin-left: 30%;
-}
-#btn_group p{
-	display: inline-block;
-	font-size: 20px;
+section td {
+    height: 40px;
+    padding-left: 5px;
+    padding-left: 20px;
 }
 
-
-
-@media(max-width: 1250px)
-{
-	section{
-		width: 70%;
-		margin-left: 15%;
-	}
-}
-@media(max-width: 1000px)
-{	
-	section{
-		width: 80%;
-		margin-left: 10%;
-	}
-}
-@media(max-width: 800px)
-{	
-	section{
-		margin-left: 0;
-		width: 100%;
-		padding: 0;
-	}
-	
-	#join_title h3{
-		font-size: 18px;
-		font-weight: 700;
-	}
-	#btn_group button p{
-		font-size: 15px;
-	}
-
+section tr td:first-child {
+    width: 70px;
+    font-weight: 700;
+    border-bottom: 5px solid rgba(64, 99, 189, 0.5);
 }
 
-@media(max-width: 600px)
-{
-	#btn_group{
-		width: 80%;
-	}
+section tr td:last-child {
+    width: 300px;
+}
 
+#join_user_info {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(26, 115, 232, 0.1);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.join_user_center {
+    display: inline-block;
+    width: 40%;
+}
+
+#join_user_img_div {
+    text-align: center;
+    width: 100%;
+}
+
+#join_user_img {
+    width: 150px;
+    height: auto;
+    display: inline-block;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%), 0 3px 1px -2px rgb(0 0 0 / 20%);
+}
+
+#btn_group {
+    width: 40%;
+    height: auto;
+    margin: auto;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+#btn_home,
+#btn_login {
+    height: 70px;
+    width: 49%;
+    border-radius: 0;
+    transition: all 0.2s;
+    border: 0;
+}
+
+#btn_login {
+    border: 1px solid gray;
+}
+
+#btn_group button:first-child {
+    background-color: #0062cc;
+    color: white;
+}
+
+#btn_group button:last-child {
+    background-color: white;
+    color: black;
+}
+
+#btn_group button:first-child:hover {
+    background-color: rgb(18, 69, 171);
+}
+
+#btn_group button:last-child:hover {
+    background-color: rgb(180, 180, 180);
+}
+
+#btn_error {
+    width: 100%;
+    height: 70px;
+    border: 1px solid gray;
+    border-radius: 0;
+    transition: all 0.2s;
+}
+
+#btn_error p {
+    font-size: 20px;
+}
+
+.join_error {
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.join_error h3 {
+    border-bottom: 7px solid red;
+    padding-bottom: 5px;
+    margin-top: 70px;
+    margin-bottom: 5px;
+    width: 40%;
+    margin-left: 30%;
+}
+
+#btn_group p {
+    display: inline-block;
+    font-size: 20px;
+}
+
+@media(max-width: 1250px) {
+    section {
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+
+@media(max-width: 1000px) {
+    section {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+@media(max-width: 800px) {
+    section {
+        margin-left: 0;
+        width: 100%;
+        padding: 0;
+    }
+    #join_title h3 {
+        font-size: 18px;
+        font-weight: 700;
+    }
+    #btn_group button p {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 600px) {
+    #btn_group {
+        width: 80%;
+    }
 }
