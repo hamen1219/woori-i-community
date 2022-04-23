@@ -418,7 +418,7 @@ class Board extends CI_Controller {
 				}
 				$url = 'https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%EA%B1%B4%EA%B0%95%EC%8B%9D%ED%92%88&oquery=%EC%8B%9D%EB%8B%A8&tqi=hsUwKdp0JywsseDgEMwssssstMV-014272';
 				
-				$data['crawling'] = $this->crawling($url);	
+				// $data['crawling'] = $this->crawling($url);	
 				$data['cat_link'] = $this->getCatLink($data['title']);
 
 				$this->load->view('homepage/board/list', $data);	
@@ -484,22 +484,22 @@ class Board extends CI_Controller {
 		return $str;
 	}
 
-	public function crawling($url)
-	{
-		require('./static/lib/snoopy/Snoopy.class.php');
-	    $snoopy = new Snoopy;
-     	$snoopy->fetch($url);
-	    //페이지 전체에서 리스트
-	    preg_match_all('/<li class="list_inner">(.*?)<\/li>/is', $snoopy->results, $html);
+	// public function crawling($url)
+	// {
+	// 	require('./static/lib/snoopy/Snoopy.class.php');
+	//     $snoopy = new Snoopy;
+    //  	$snoopy->fetch($url);
+	//     //페이지 전체에서 리스트
+	//     preg_match_all('/<li class="list_inner">(.*?)<\/li>/is', $snoopy->results, $html);
 
-	    //크롤링 한 장난감 데이터 배열 (1-10위)
-	  	$arr = [];
-	    for($i = 0; $i < 10; $i++)
-	    {	    
-	    	array_push($arr, $html[0][$i*4]);
-	    }
+	//     //크롤링 한 장난감 데이터 배열 (1-10위)
+	//   	$arr = [];
+	//     for($i = 0; $i < 10; $i++)
+	//     {	    
+	//     	array_push($arr, $html[0][$i*4]);
+	//     }
 
-		//순위 반환 
-		return $arr;
-	}
+	// 	//순위 반환 
+	// 	return $arr;
+	// }
 }
