@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+		/* 회원가입 버튼 클릭시 */
 		$('#submit').click(function(){
 	
 			let imp_uid = $('input[name=imp_uid]').val();
@@ -11,62 +12,61 @@ $(document).ready(function(){
 			
 			if($('#tid').val().length < 8 || $('#tid').val().length > 15){
 				alert("아이디를 다시 입력하세요") ;		
+				return false ;	
 			}
-			else if($('#tpw').val().length < 7 || $('#tpw').length > 12){
-				alert("패스워드를 다시 입력하세요") ;				
+			if($('#tpw').val().length < 7 || $('#tpw').length > 12){
+				alert("패스워드를 다시 입력하세요") ;			
+				return false ;	
 			}
-			else if($('#rpw').val().length < 7 || $('#rpw').length > 12) {
-				alert("패스워드 확인을 다시 입력하세요") ;			
+			if($('#rpw').val().length < 7 || $('#rpw').length > 12) {
+				alert("패스워드 확인을 다시 입력하세요") ;		
+				return false ;		
 			}
-			else if($('#tname').val().length <= 1 || $('#tname').length > 12){
+			if($('#tname').val().length <= 1 || $('#tname').length > 12){
 				alert("이름을 다시 입력하세요") ;			
+				return false ;	
 			}
-			else if($('#addr').val() == "" || $('#addr_api').val() == "" ){
+			if($('#addr').val() == "" || $('#addr_api').val() == "" ){
 				alert("주소를 다시 입력하세요") ;			
+				return false ;	
 			}			
-			else if($('#tpw').val() !== $('#rpw').val()){
-				alert("패스워드가 일치하지 않습니다") ;			
+			if($('#tpw').val() !== $('#rpw').val()){
+				alert("패스워드가 일치하지 않습니다") ;		
+				return false ;		
 			}
-			else{
-				get_ajax_join();
-			}
-			return false;
+
+			get_ajax_join();
+			
+			return ;
 		});
 		
 		msg='';
 		 
 		$('#tid').keyup(function(event){
 			str = $('#tid').val();
-			if(str.length < 8 || str.length > 15){
+			if(str.length < 8 || str.length > 15) {
 				$('#alert_tid').html(msg).css({color: 'red'});
 				msg = "길이 : 8-15";
 				$('#alert_tid').html(msg).css({color: 'red'});
 			}
-			else
-			{
+			else {
 				get_ajax();					
 			}						
 		});
 
 		$('#tpw').keyup(function(event){
 			str = $('#tpw').val();
-			if(str.length < 7 || str.length > 12)
-			{				
+			if(str.length < 7 || str.length > 12) {				
 				msg = "길이 : 7-12";
 				$('#alert_tpw').html(msg).css({color: 'red'});
 				$('#alert_rpw').html("");
-			} 
-			else
-			{
-				if(str != $('#rpw').val())
-				{
+			} else {
+				if(str != $('#rpw').val()) {
 					msg = "PW 불일치";
 					$('#alert_rpw').html(msg).css({color: 'red'});
 					msg = "사용 가능한 PW";
 					$('#alert_tpw').html(msg).css({color: 'black'});
-				}
-				else
-				{
+				} else {
 					msg = "사용 가능한 PW";
 					$('#alert_tpw').html(msg).css({color: 'black'});
 					msg = "일치";
@@ -82,15 +82,11 @@ $(document).ready(function(){
 				msg = "PW 불일치";
 				$('#alert_rpw').html(msg).css({color: 'red'});
 			}
-			else
-			{
-				if(str.length < 7 || str.length > 12)
-				{
+			else {
+				if(str.length < 7 || str.length > 12) {
 					msg = "길이 : 7-12";
 					$('#alert_rpw').html(msg).css({color: 'red'});
-				}
-				else
-				{
+				} else {
 					msg = "일치";
 					$('#alert_rpw').html(msg).css({color: 'black'});
 				}
@@ -103,8 +99,7 @@ $(document).ready(function(){
 			if(str.length < 2 || str.length > 12){
 				msg = "길이 : 2-12";
 				$('#alert_tname').html(msg).css({color: 'red'});
-			}
-			else{
+			} else{
 				$('#alert_tname').html("");
 			}						
 		});
@@ -115,11 +110,10 @@ $(document).ready(function(){
 			if(str.length == 0){
 				msg = "주소 입력 필수"
 				$('#alert_addr').html(msg).css({color: 'red'});
-			}
-			else{
+			} else{
 				str = $('#addr_api').val();
-				if(str.length == 0)
-				{
+				
+				if(str.length == 0) {
 					$('#alert_addr').html(msg).css({color: 'red'});
 				}
 				$('#alert_addr').html("");
@@ -132,11 +126,11 @@ $(document).ready(function(){
 			if(str.length == 0){
 				msg = "이메일 주소 입력 필수"
 				$('#alert_email').html(msg).css({color: 'red'});
-			}
-			else{
+			} else {
+
 				str = $('#email').val();
-				if(str.length == 0)
-				{
+
+				if(str.length == 0) {
 					$('#alert_email').html(msg).css({color: 'red'});
 				}
 				$('#alert_email').html("");
@@ -145,6 +139,7 @@ $(document).ready(function(){
 	});
 
 
+/* 아임포트 인증토큰 가져오기 */
 function getImpUid()
 {
 	let IMP = window.IMP ;
@@ -152,6 +147,7 @@ function getImpUid()
 
 	IMP.certification({ // param
 		merchant_uid: "ORD20180131-0000011", // 주문 번호
+		popup : true // 모바일에서도 팝업 모드로 진행 (not use redirect)
 
 	}, function (rsp) { // callback
 
