@@ -1,4 +1,16 @@
 <?php
+
+/**
+ * 접속 프로토콜 확인 후 HTTP인 경우 HTTPS로 강제 다이렉트
+ * @author 안형모
+ */
+if(!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] != "on"){
+	
+	// HTTPS 강제 리다이렉트
+	header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"], true, 301);
+}
+
+
 /**
  * CodeIgniter
  *
